@@ -8,7 +8,7 @@ const todolists = [
   {id: 3, name: 'test3'}
 ];
 
-app.use(express.static('TodoList_Server/public'))
+app.use(express.static('./public'))
 app.use(express.json());
 
 /**====================================================================================================
@@ -18,7 +18,7 @@ app.use(express.json());
  * 
  */
 app.get('/', (req, res) => {
-  res.sendfile('TodoList_Server/public/index.html');
+  res.sendfile('public/index.html');
 });
 
 /* ------------------------- affiche toute les todolists ------------------------ */
@@ -134,7 +134,7 @@ app.delete('/api/todolist/:id', (req, res) => {
 /**==================================================
  * >>>>>> CONNEXION AU SERVEUR 
 ==================================================*/
-const port = 7778;
+const port = 1234;
 hostname = 'localhost'; 
 app.listen(port, hostname, function () {
     console.log("Mon serveur fonctionne sur http://"+ hostname +":"+port+"\n");
