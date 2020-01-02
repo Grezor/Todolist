@@ -1,0 +1,1 @@
+- pour lancer le server : npm start (dependances supervisor)

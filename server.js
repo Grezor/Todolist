@@ -134,7 +134,7 @@ app.delete('/api/todolist/:id', (req, res) => {
 /**==================================================
  * >>>>>> CONNEXION AU SERVEUR 
 ==================================================*/
-const port = 1234;
+const port = 1472;
 hostname = 'localhost'; 
 app.listen(port, hostname, function () {
     console.log("Mon serveur fonctionne sur http://"+ hostname +":"+port+"\n");
