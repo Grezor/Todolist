@@ -8,46 +8,46 @@ var todolist = [];
 var faire = [];
 var terminer = [];
 
-var createNewTaskElement = function (taskString) {
+// var createNewTaskElement = function (taskString) {
 
-	var listeItem = document.createElement("li");
-	var checkBox = document.createElement("input");
-	var label = document.createElement("label");
-	var InputEdit = document.createElement("input");
-	var ButtonEdit = document.createElement("button");
-	var ButtonSupprimer = document.createElement("button");
+// 	var listeItem = document.createElement("li");
+// 	var checkBox = document.createElement("input");
+// 	var label = document.createElement("label");
+// 	var InputEdit = document.createElement("input");
+// 	var ButtonEdit = document.createElement("button");
+// 	var ButtonSupprimer = document.createElement("button");
 
-	label.innerText = taskString;
+// 	label.innerText = taskString;
 
-	checkBox.type = "checkbox";
-	InputEdit.type = "text";
+// 	checkBox.type = "checkbox";
+// 	InputEdit.type = "text";
 
-	ButtonEdit.innerText = "Edit";
-	ButtonEdit.className = "edit";
-	ButtonSupprimer.innerText = "Delete";
-	ButtonSupprimer.className = "delete";
+// 	ButtonEdit.innerText = "Edit";
+// 	ButtonEdit.className = "edit";
+// 	ButtonSupprimer.innerText = "Delete";
+// 	ButtonSupprimer.className = "delete";
 
-	listeItem.appendChild(checkBox);
-	listeItem.appendChild(label);
-	listeItem.appendChild(InputEdit);
-	listeItem.appendChild(ButtonEdit);
-	listeItem.appendChild(ButtonSupprimer);
+// 	listeItem.appendChild(checkBox);
+// 	listeItem.appendChild(label);
+// 	listeItem.appendChild(InputEdit);
+// 	listeItem.appendChild(ButtonEdit);
+// 	listeItem.appendChild(ButtonSupprimer);
 	
-	return listeItem;
+// 	return listeItem;
 
-}
+// }
 
 /**
  * Ajouter une tache
  */
 var AjouterUneTache = function () {
-	console.log("===================== Ajout ===================== ");
-	var taskValue = document.getElementById("new-task").value;
-	ajout(taskValue);
-	console.log("===================== / Ajout ===================== ");
+	// console.log("===================== Ajout ===================== ");
+	// var taskValue = document.getElementById("new-task").value;
+	// ajout(taskValue);
+	// console.log("===================== / Ajout ===================== ");
 	
-	// console.log(obj);
-	// console.log(jsonObjet);
+	// // console.log(obj);
+	// // console.log(jsonObjet);
 }
 /**
  * Editer une tache
@@ -55,17 +55,6 @@ var AjouterUneTache = function () {
 var editerTache = function () {
 	console.log('%c EDITER TACHE', 'background: #222; color: #bada55');
 	console.log('%c CHANGEMENT TACHE ET SAVE', 'background: #222; color: red');
-	var listeItem = this.parentNode;
-	var InputEdit = listeItem.querySelector('input[type=text]');
-	var label = listeItem.querySelector("label");
-	var containsClass = listeItem.classList.contains("editMode");
-
-	if (containsClass) {
-		label.innerText = InputEdit.value;
-	} else {
-		InputEdit.value = label.innerText;
-	}
-	listeItem.classList.toggle("editMode");
 }
 
 /**
