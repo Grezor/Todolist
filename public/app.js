@@ -41,10 +41,11 @@ var createNewTaskElement = function (taskString) {
  * Ajouter une tache
  */
 var AjouterUneTache = function () {
-	console.log("Ajout");
+	console.log("===================== Ajout ===================== ");
 	var taskValue = document.getElementById("new-task").value;
 	ajout(taskValue);
-
+	console.log("===================== / Ajout ===================== ");
+	
 	// console.log(obj);
 	// console.log(jsonObjet);
 }

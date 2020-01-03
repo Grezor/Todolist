@@ -162,3 +162,15 @@ ul li.editMode label {
   display: inline-block;
   font-size: 16px;
 }
+
+
+button .edit {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  margin: 10px 0 0;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}

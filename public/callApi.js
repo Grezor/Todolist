@@ -6,6 +6,8 @@ const container = document.createElement('ul')
 container.setAttribute('id', 'incomplete-tasks')
 
 app.appendChild(container);
+var serverUrl = 'http://localhost:1472'
+
 
 var request = new XMLHttpRequest();
 afficherGlobal();
@@ -17,7 +19,7 @@ afficherGlobal();
 function afficherGlobal() {
 
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://localhost:7778/api/todolists', true);
+    request.open('GET', serverUrl + '/api/todolists', true);
 
     request.onload = function () {
         var data = JSON.parse(this.response);
@@ -57,8 +59,8 @@ function statusOk(data) {
         BtnEdit.setAttribute("class", "edit");
         BtnEdit.setAttribute("value", "EDIT");
         BtnEdit.setAttribute("id", "edit");
-        el = BtnEdit.dataset.name
-        el.dataset.name = "bla";
+        // el = BtnEdit.dataset.name
+        // el.dataset.name = "bla";
 
         const BtnDelete = document.createElement('INPUT')
         BtnDelete.setAttribute("type", "button");
@@ -84,7 +86,7 @@ function statusError() {
 function ajout(taskValue) {
     var request = new XMLHttpRequest();
     // requete serveur methode post
-    request.open('POST', 'http://localhost:7778/api/todolists/', true);
+    request.open('POST', serverUrl + '/api/todolists/', true);
     request.setRequestHeader("Content-Type", "application/json");
     // l'objet est modifier
     var obj = { name: taskValue }
@@ -99,7 +101,7 @@ function ajout(taskValue) {
 function SupprimerElement() {
     var request = new XMLHttpRequest();
     // requete serveur methode post
-    request.open('DELETE', 'http://localhost:7778/api/todolists/', true);
+    request.open('DELETE', serverUrl + '/api/todolists/', true);
     request.setRequestHeader("Content-Type", "application/json");
 
 
