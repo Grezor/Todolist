@@ -104,7 +104,7 @@ function validateTodolist(todolist){
 /**====================================================================================================
  * API DELETE - Supprime une tache 
 ====================================================================================================*/
-app.delete('/api/todolist/:id', (req, res) => {
+app.delete('/api/todolists/:id', (req, res) => {
 
   const todolist = todolists.find( c => c.id === parseInt(req.params.id));
   
@@ -139,8 +139,3 @@ hostname = 'localhost';
 app.listen(port, hostname, function () {
     console.log("Mon serveur fonctionne sur http://"+ hostname +":"+port+"\n");
 })
-
-
-
-
-
