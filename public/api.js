@@ -35,8 +35,6 @@ function addTasks(){
 	
 	// console.log(obj);
     // console.log(jsonObjet);
-    
-    // Ajouter une tache
 }
 AjouterTache.addEventListener("click", addTasks);
 
@@ -55,8 +53,6 @@ function editTasks(){
 function deleteTasks(){
     var request = new XMLHttpRequest();
     request.open('DELETE' , serverUrl + '/api/todolist/:id');
-    
-    cont todolist
 }
 /**
  * Update une  tache
@@ -84,7 +80,6 @@ function finishTasks(){
     // return la list du tableau
     console.log("id :  " +  req.params.id + " ========== element supprimer ");
     res.send(todolist)
-  }
 }
 
 
@@ -101,11 +96,12 @@ function ajout(taskValue) {
     // requete serveur methode post
     request.open('POST', serverUrl + '/api/todolists/', true);
     request.setRequestHeader("Content-Type", "application/json");
-    // l'objet est modifier
-    var obj = { name: taskValue }
-    var jsonObjet = JSON.stringify(obj);
-    // si la requete a le status 200 tu affiche
-    request.send(jsonObjet);
+    request.onload = function(){
+        if (request.status >= 200 && request.status < 400)  {
+            render();
+        }
+    };
 
-    // afficherGlobal 
+    // si la requete a le status 200 tu affiche
+    request.send(JSON.stringify({ name: taskValue }));
 }

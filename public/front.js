@@ -23,10 +23,9 @@ function render(){
     request.open('GET', serverUrl + '/api/todolists', true);
 
     request.onload = function(){
-        var data = JSON.parse(this.response);
-
         if (request.status >= 200 && request.status < 400)  {
-            status200(data);
+            var data = JSON.parse(this.response);
+            refreshTodoList(data);
         }else{
             statusError();
         }
@@ -42,32 +41,45 @@ function listenerClicAdd(){
 /**
  * 
  */
-function listenerClicEdit(){
-    
+function listenerClicEdit(event){
+    const input = event.target.parentNode.querySelector('input[type="text"]');
+    input.style.display = "block";
+}
+
+function listenerClicEditSubmit(event) {
+    if (event.keyCode === 13) {
+        const id = parseInt(event.target.parentNode.dataset.id)
+        var request = new XMLHttpRequest();
+
+        // requete serveur methode post
+        request.open('PUT', serverUrl + '/api/todolists/' + id, true);
+        request.setRequestHeader("Content-Type", "application/json");
+        request.onload = function(){
+            if (request.status >= 200 && request.status < 400)  {
+                render();
+            }
+        }
+
+        request.send(JSON.stringify({name: event.target.value}));
+    }
 }
 /**
  * 
  */
-function listenerClicDelete(){
+function listenerClicDelete(event) {
+    const id = parseInt(event.target.parentNode.dataset.id)
     var request = new XMLHttpRequest();
+
     // requete serveur methode post
-    request.open('DELETE', serverUrl + '/api/todolists/', true);
+    request.open('DELETE', serverUrl + '/api/todolists/' + id, true);
     request.setRequestHeader("Content-Type", "application/json");
+    request.onload = function(){
+        if (request.status >= 200 && request.status < 400)  {
+            render();
+        }
+    }
 
-
-    const todolist = todolists.find(c => c.id === parseInt(request.params.id));
-
-
-    //delete
-
-    // La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau
-    const index = todolists.indexOf(todolist);
-    // splite permet de diviser une chaine à partir d'un séparateurs
-    todolists.splice(index, 1);
-    // return la list du tableau
-    console.log("id :  " + request.params.id + " ========== element supprimer ");
-    request.send(todolist)
-
+    request.send()
 }
 /**
  * 
@@ -107,10 +119,13 @@ function listenerClicUpdate(){
 
 
 
-function status200(data){
+function refreshTodoList(data) {
+    container.innerHTML = '';
+
     data.forEach(afaire => {
         const li = document.createElement('li');
         li.setAttribute('class', 'afaire')
+        li.dataset.id = afaire.id
 
         const input = document.createElement('INPUT')
         input.setAttribute("type", "checkbox");
@@ -121,18 +136,23 @@ function status200(data){
 
         const inputText = document.createElement('INPUT')
         inputText.setAttribute("type", "text");
-        label.setAttribute('class', 'label');
+        inputText.setAttribute('value', afaire.name);
+        inputText.setAttribute('class', 'label');
+        inputText.addEventListener('keyup', listenerClicEditSubmit);
+
 
         const BtnEdit = document.createElement('INPUT')
         BtnEdit.setAttribute("type", "button");
         BtnEdit.setAttribute("class", "edit");
         BtnEdit.setAttribute("value", "EDIT");
         BtnEdit.setAttribute("id", "edit");
+        BtnEdit.addEventListener('click', listenerClicEdit)
 
         const BtnDelete = document.createElement('INPUT')
         BtnDelete.setAttribute("type", "button");
-        BtnEdit.setAttribute("class", "delete");
+        BtnDelete.setAttribute("class", "delete");
         BtnDelete.setAttribute("value", "DELETE");
+        BtnDelete.addEventListener('click', listenerClicDelete)
 
 
         container.appendChild(li);
