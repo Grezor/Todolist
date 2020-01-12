@@ -27,10 +27,6 @@ function render(){
     request.send();
 }
 
-function listenerClicAdd(){
-    
-}
-
 function listenerClicEdit(event){
     const input = event.target.parentNode.querySelector('input[type="text"]');
     input.style.display = "block";
@@ -49,7 +45,6 @@ function listenerClicEditSubmit(event) {
                 render();
             }
         }
-
         request.send(JSON.stringify({name: event.target.value}));
     }
 }
