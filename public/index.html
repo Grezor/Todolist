@@ -8,21 +8,25 @@
     <title>Todo List App</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<style>
-
-</style>
-    
+   
     <div class="container">
+        <div class="wrap">
         <p>
             <form action="" name="tache" id="POSTDATA"></form>
-            <label for="new-task">Ajouter une tache </label><input id="new-task" type="text"><button type="submit">Add</button>
+            <label class="titleAddTask" for="new-task">Ajouter une tache </label>
+            <input id="new-task" type="text">
+            <!-- <button class="bouttonAdd" type="submit">Add</button> -->
+            <div class="btn-wrapper">
+                <button type="button" class="btn">touch me</button>
+            </div>
         </p>
-        
-        <h3>A faire</h3>
 
+        <h3>A faire</h3>
+        
         <div id="root" ></div>
         <!-- <ul id="incomplete-tasks">
             <li class="afaire">
@@ -41,6 +45,7 @@
         <ul id="completed-tasks">
         </ul>
       </div>
+    </div>
 
       <script type="text/javascript" src="app.js"></script>
       <script type="text/javascript" src="route.js"></script>

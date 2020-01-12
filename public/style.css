@@ -1,13 +1,17 @@
-/* Basic Style */
+@font-face {
+  font-family: "Cascadia";
+  src: url('../Cascadia.ttf');
+}
+
 body {
-  background: #fff;
-  color: #333;
+  background: #7f8c8d;
+  color: #fff;
   font-family: Lato, sans-serif;
 }
 
 .container {
   display: block;
-  width: 400px;
+  width: 600px;
   margin: 100px auto 0;
 }
 
@@ -26,25 +30,12 @@ h3 {
   list-style: none;
 }
 
-input,
+/* input,
 button {
   outline: none;
-}
+} */
 
-button {
-  background: none;
-  border: 0px;
-  color: #888;
-  font-size: 15px;
-  width: 60px;
-  margin: 10px 0 0;
-  font-family: Lato, sans-serif;
-  cursor: pointer;
-}
 
-button:hover {
-  color: #333;
-}
 
 /* Heading */
 h3,
@@ -79,14 +70,24 @@ input[type="text"]:focus {
 label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 72px;
+  margin: 0 0 24px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 input#new-task {
   float: left;
-  width: 318px;
+  width: 355px;
+  margin-right: 50px;
 }
 
-p > button:hover {
+p>button:hover {
   color: #0fc57c;
 }
 
@@ -97,35 +98,71 @@ li {
   border-bottom: 1px solid #eee;
 }
 
-li > input[type="checkbox"] {
+li>input[type="checkbox"] {
   margin: 0 10px;
   position: relative;
   top: 15px;
 }
 
-li > label {
+li>label {
   font-size: 18px;
   line-height: 40px;
   width: 100px;
   padding: 0 0 0 11px;
 }
 
-li > input[type="text"] {
+/* 
+li>input[type="text"] {
   width: 226px;
-}
+} */
 
-li > .delete:hover {
-  color: #cf2323;
-}
 
-li > .edit:hover {
-  color: #0fc57c;
-}
 
 /* Completed */
 #completed-tasks label {
   text-decoration: line-through;
-  color: #888;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background-color: #00f0a8;
+  height: 45px;
+  line-height: 42px;
+  padding: 0 30px;
+  font-size: 20px;
+  border-radius: 30px;
+  color: #282d32;
+  cursor: pointer;
+  transition: all .5s;
+  transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+.btn:active {
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+}
+
+
+.labelColor {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  /* font-size: 20px; */
 }
 
 /* Edit Task */
@@ -141,36 +178,72 @@ ul li.editMode label {
   display: none;
 }
 
+/* label .titleAddTask {
+  /* text-align: center; 
+
+} */
+
+.buttonDelete {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 15px 16px;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 15%;
+  /* text-align: center; */
+  /* position: absolute; */
+  /* display: inline-block; */
+}
+
+.buttonDelete:hover {
+  background-color: #B24449;
+  border: none;
+  color: white;
+  padding: 15px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+
 .buttonEdit {
-  background-color: #4caf50; /* Green */
+  background-color: #27ae60;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 16px;
+  margin-right: 10px;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 12px;
+  border-radius: 15%;
+  /* display: inline-block; */
+  /* position: absolute; */
+  /* text-align: right; */
+  /* float: right; */
+}
+
+.buttonEdit:hover {
+  background-color: rgb(103, 231, 126);
+  border: none;
+  color: white;
+  padding: 15px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-}
-
-.buttonDelete{
-  background-color: #f44336; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 
-button .edit {
-  background: none;
-  border: 0px;
-  color: #888;
-  font-size: 15px;
-  width: 60px;
-  margin: 10px 0 0;
-  font-family: Lato, sans-serif;
-  cursor: pointer;
-}
+/* .wrap{ */
+/* width: 300px;
+	height: 350px; 
+	margin: 50px auto;
+	border-radius: 20px;
+	border: solid 8px #2c3033;
+	background: white;
+	box-shadow: 0 0 0px 1px rgba(255,255,255,.4),
+						0 0 0px 3px #2c3033; */
+/* } */
