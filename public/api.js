@@ -3,43 +3,20 @@ var AjouterTache = document.querySelector("button");
 var incompleteTache = document.getElementById("incomplete-tasks");
 var completeTache = document.getElementById("completed-tasks");
 
-
-// export {ajout} from 'functions.js';
-/**
- * Afficher une tache
- */
-function getTasks(){
-
-}
-/**
- * Afficher les taches
- */
-function setTasks(){
-    
-}
 /**
  * Ajouter une tache
  */
-function addTasks(){
-    console.log("===================== Ajout ===================== ");
-	var taskValue = document.getElementById("new-task").value;
-	ajout(taskValue);
-	console.log("===================== / Ajout ===================== ");
-	
-	// console.log(obj);
+function addTasks() {
+
+    var taskValue = document.getElementById("new-task").value;
+    ajout(taskValue);
+    console.log('%c Ajout ', 'background: #222; color: #bada55; font-size:30px;');
+
+    // console.log(obj);
     // console.log(jsonObjet);
 }
 AjouterTache.addEventListener("click", addTasks);
 
-
-
-/**
- * Editer une tache tache
- */
-function editTasks(){
-    
-    
-}
 /**
  * Supprimer une tache
  */
@@ -47,12 +24,7 @@ function deleteTasks(){
     var request = new XMLHttpRequest();
     request.open('DELETE' , serverUrl + '/api/todolist/:id');
 }
-/**
- * Update une  tache
- */
-function updateTasks(){
-    
-}
+
 
 
 function finishTasks(){
@@ -74,14 +46,6 @@ function finishTasks(){
     console.log("id :  " +  req.params.id + " ========== element supprimer ");
     res.send(todolist)
 }
-
-
-
-
-
-
-
-
 
 
 function ajout(taskValue) {
