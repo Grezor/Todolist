@@ -26,18 +26,14 @@ function deleteTasks(){
 }
 
 
-
 function finishTasks(){
     var request = new XMLHttpRequest();
     const todolist = todolists.find( c => c.id === parseInt(req.params.id));
-  
     // si il na pas d'id, erreur 404
     if(!todolist){
-      res.status(404).send('manque id');
+        res.status(404).send('manque id');
     } 
-  
-    //delete
-    
+
     // La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau
     const index = todolists.indexOf(todolist);
     // splite permet de diviser une chaine à partir d'un séparateurs
@@ -62,3 +58,35 @@ function ajout(taskValue) {
     // si la requete a le status 200 tu affiche
     request.send(JSON.stringify({ name: taskValue }));
 }
+
+
+
+
+/**
+ * 
+ * CREATION NOUVELLES FONCTION
+ * 
+ * 
+ */
+// Si on appuie sur entrer dans l'input
+function addlistAfterKey(event){
+    if (inputlength() > 0 && event.which === 13) {
+        addTasks();
+        
+    }
+}
+
+
+function inputlength(){
+    return InputTache.value.length;
+}
+
+function addToucheEnter(){
+    if (inputlength() > 0) {
+        createListElement();
+    }
+}
+
+
+AjouterTache.addEventListener("click", addTasks);
+InputTache.addEventListener("keypress", addlistAfterKey);

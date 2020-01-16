@@ -1,11 +1,12 @@
 const Joi = require('joi')
 const express = require('express')
 const app = express()
+
 // tableau de ma todo (sans bdd)
 const todolists = [
-  {id: 1, name: 'test1'},
-  {id: 2, name: 'test2'},
-  {id: 3, name: 'test3'}
+  {id: 1, name: 'test1',done: true},
+  {id: 2, name: 'test2',done: false},
+  {id: 3, name: 'test3',done: true}
 ];
 
 app.use(express.static('./public'))
@@ -14,17 +15,17 @@ app.use(express.json());
 /**====================================================================================================
  * GET 
 ====================================================================================================*/
+// affiche toute les taches
 app.get('/', (req, res) => {
   res.sendfile('public/index.html');
 });
 
-/* ------------------------- affiche toute les todolists ------------------------ */
+/* affiche toute les todolists */
 app.get('/api/todolists', (req, res) => {
   res.send(todolists);
 });
 
-/* ------------------- affiche la todo avec l'id en paramètre ------------------ */
-
+/*  affiche la todo avec l'id en paramètre  */
 app.get('/api/todolists/:id', (req, res) => {
   const todolist = todolists.find( c => c.id === parseInt(req.params.id));
   if(!todolist) res.status(404).send('manque id');
@@ -42,18 +43,17 @@ app.post('/api/todolists', (req, res) => {
     res.status(400).send(error.details[0].message)
     return;
   }
-// trouve le plus grand id 
 
+  const todolist = {
+      id: todolists.length + 1,
+      name: req.body.name,
+      done : true
+    };
 
-const todolist = {
-    id: todolists.length + 1,
-    name: req.body.name
-  };
-
-  todolists.push(todolist);
-  console.log(todolists.length, 'valeur dans le tableau todoLists');
-  console.log('=== ',todolists );
-  res.send(todolist)
+    todolists.push(todolist);
+    console.log(todolists.length, 'valeur dans le tableau todoLists');
+    console.log('=== ',todolists );
+    res.send(todolist)
 });
 
 
@@ -81,23 +81,7 @@ app.put('/api/todolists/:id', (req, res) => {
   res.send(todolist)
 });
 
-/**====================================================================================================
- * Function de validation
-====================================================================================================*/
-function validateTodolist(todolist){
 
-  const schema = {
-    // il faut que le name, a minimum 3 caractère
-    name: Joi.string().min(3).required()
-  }
-
-  return Joi.validate(todolist, schema);
-}
-
-// TODO  a terminer , prend le dernier element du tableau
-// function DernierElementTableau(){
-//   Math.max.apply(Math, todolists.map(function(o) { return o.y; }))
-// }
 /**====================================================================================================
  * API DELETE - Supprime une tache 
 ====================================================================================================*/
@@ -120,6 +104,20 @@ app.delete('/api/todolists/:id', (req, res) => {
   console.log("id :  " +  req.params.id + " ========== element supprimer ");
   res.send(todolist)
 });
+
+/**====================================================================================================
+ * Function de validation
+ * Il vérifie que il faut au minimum 3 caractère
+====================================================================================================*/
+function validateTodolist(todolist){
+
+  const schema = {
+    // il faut que le name, a minimum 3 caractère
+    name: Joi.string().min(3).required()
+  }
+
+  return Joi.validate(todolist, schema);
+}
 
 
 
