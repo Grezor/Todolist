@@ -2,7 +2,7 @@
 var InputTache = document.getElementById("new-task");
 var AjouterTache = document.querySelector("button");
 var incompleteTache = document.getElementById("incomplete-tasks");
-var completeTache = document.getElementById("completed-tasks");
+var completeTache = document.getElementById("completed");
 
 var todolist = [];
 var faire = [];
@@ -120,9 +120,9 @@ function validateTodolist(todolist) {
 
     return Joi.validate(todolist, schema);
 }
-for (var i = 0; i < completeTache.children.length; i++) {
-	bindTaskEvents(completeTache.children[i], taskIncomplete);
-}
+// for (var i = 0; i < completeTache.children.length; i++) {
+// 	bindTaskEvents(completeTache.children[i], taskIncomplete);
+// }
 
 var pushData = function () {
 	var Inputext = document.getElementById('new-task');
@@ -135,3 +135,5 @@ var pushData = function () {
 	document.getElementById('incomplete-tasks').innerHTML = pval;
 	console.log(todolist);
 }
+
+

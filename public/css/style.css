@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #7f8c8d;
+  background: #0984e3;
   color: #fff;
   font-family: Lato, sans-serif;
 }
@@ -30,14 +30,7 @@ h3 {
   list-style: none;
 }
 
-/* input,
-button {
-  outline: none;
-} */
 
-
-
-/* Heading */
 h3,
 label[for="new-task"] {
   color: #333;
@@ -111,13 +104,6 @@ li>label {
   padding: 0 0 0 11px;
 }
 
-/* 
-li>input[type="text"] {
-  width: 226px;
-} */
-
-
-
 /* Completed */
 #completed-tasks label {
   text-decoration: line-through;
@@ -178,10 +164,6 @@ ul li.editMode label {
   display: none;
 }
 
-/* label .titleAddTask {
-  /* text-align: center; 
-
-} */
 
 .buttonDelete {
   background-color: #f44336;
@@ -236,14 +218,13 @@ ul li.editMode label {
   font-size: 12px;
 }
 
+.done{
+  background-color: #34495e;
+  color: #fff;
+}
 
-/* .wrap{ */
-/* width: 300px;
-	height: 350px; 
-	margin: 50px auto;
-	border-radius: 20px;
-	border: solid 8px #2c3033;
-	background: white;
-	box-shadow: 0 0 0px 1px rgba(255,255,255,.4),
-						0 0 0px 3px #2c3033; */
-/* } */
+
+.toto{
+  color: red;
+text-decoration: underline;
+}

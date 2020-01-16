@@ -12,26 +12,22 @@ render();
 /**
  * Afficher au chargement de la page
  */
-function render(){
+function render() {
     const request = new XMLHttpRequest();
     request.open('GET', serverUrl + '/api/todolists', true);
 
-    request.onload = function(){
-        if (request.status >= 200 && request.status < 400)  {
+    request.onload = function () {
+        if (request.status >= 200 && request.status < 400) {
             const data = JSON.parse(this.response);
             refreshTodoList(data);
-        }else{
+        } else {
             statusError();
         }
     }
     request.send();
 }
 
-function listenerClicAdd(){
-    
-}
-
-function listenerClicEdit(event){
+function listenerClicEdit(event) {
     const input = event.target.parentNode.querySelector('input[type="text"]');
     input.style.display = "block";
 }
@@ -44,13 +40,12 @@ function listenerClicEditSubmit(event) {
         // requete serveur methode post
         request.open('PUT', serverUrl + '/api/todolists/' + id, true);
         request.setRequestHeader("Content-Type", "application/json");
-        request.onload = function(){
-            if (request.status >= 200 && request.status < 400)  {
+        request.onload = function () {
+            if (request.status >= 200 && request.status < 400) {
                 render();
             }
         }
-
-        request.send(JSON.stringify({name: event.target.value}));
+        request.send(JSON.stringify({ name: event.target.value }));
     }
 }
 
@@ -61,8 +56,8 @@ function listenerClicDelete(event) {
     // requete serveur methode post
     request.open('DELETE', serverUrl + '/api/todolists/' + id, true);
     request.setRequestHeader("Content-Type", "application/json");
-    request.onload = function(){
-        if (request.status >= 200 && request.status < 400)  {
+    request.onload = function () {
+        if (request.status >= 200 && request.status < 400) {
             render();
         }
     }
@@ -77,10 +72,17 @@ function refreshTodoList(data) {
         // creation du li
         const li = document.createElement('li');
         li.setAttribute('class', 'afaire')
+        // if (afaire.done === true) {
+        //     li.setAttribute('class', 'toto')
+        // }else{
+        //     li.setAttribute('class', 'titi')
+        // }
         li.dataset.id = afaire.id
 
         const input = document.createElement('INPUT')
         input.setAttribute("type", "checkbox");
+        input.setAttribute('class', 'checkbox');
+        input.className = 'checkbox'
 
         const label = document.createElement("LABEL");
         label.textContent = afaire.name
@@ -95,6 +97,8 @@ function refreshTodoList(data) {
         inputText.setAttribute('class', 'label');
         // touche entree du clavier
         inputText.addEventListener('keyup', listenerClicEditSubmit);
+        // vide l'input, après le enter
+        InputTache.value = "";
 
         const BtnEdit = document.createElement('INPUT')
         BtnEdit.setAttribute("type", "button");
@@ -112,6 +116,15 @@ function refreshTodoList(data) {
         // class css
         BtnDelete.className = 'buttonDelete';
 
+        // rajoute une classe FINI si on clic dessus
+        function crossOut() {
+            li.classList.toggle("done")
+        }
+        li.addEventListener("click", crossOut);
+
+
+
+
         container.appendChild(li);
         li.appendChild(input);
         li.appendChild(label);
@@ -126,3 +139,6 @@ function statusError() {
     errorMessage.textContent = `ERREUR !`;
     app.appendChild(errorMessage);
 }
+
+
+
