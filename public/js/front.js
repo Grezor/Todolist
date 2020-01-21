@@ -8,14 +8,12 @@ const serverUrl = 'http://localhost:1472';
 // var request = new XMLHttpRequest();
 render();
 
-
 /**
  * Afficher au chargement de la page
  */
 function render() {
     const request = new XMLHttpRequest();
     request.open('GET', serverUrl + '/api/todolists', true);
-
     request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
             const data = JSON.parse(this.response);

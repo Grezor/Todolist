@@ -7,11 +7,9 @@ var completeTache = document.getElementById("completed-tasks");
  * Ajouter une tache
  */
 function addTasks() {
-
     var taskValue = document.getElementById("new-task").value;
     ajout(taskValue);
     console.log('%c Ajout ', 'background: #222; color: #bada55; font-size:30px;');
-
     // console.log(obj);
     // console.log(jsonObjet);
 }
@@ -33,7 +31,6 @@ function finishTasks(){
     if(!todolist){
         res.status(404).send('manque id');
     } 
-
     // La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau
     const index = todolists.indexOf(todolist);
     // splite permet de diviser une chaine à partir d'un séparateurs
@@ -43,19 +40,18 @@ function finishTasks(){
     res.send(todolist)
 }
 
-
 function ajout(taskValue) {
     var request = new XMLHttpRequest();
     // requete serveur methode post
     request.open('POST', serverUrl + '/api/todolists/', true);
     request.setRequestHeader("Content-Type", "application/json");
     request.onload = function(){
+        // si le status de la requetes = 200, cela affiche le chargement de la todolist
         if (request.status >= 200 && request.status < 400)  {
             render();
         }
     };
-
-    // si la requete a le status 200 tu affiche
+    // Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
     request.send(JSON.stringify({ name: taskValue }));
 }
 

@@ -32,7 +32,6 @@ app.get('/api/todolists/:id', (req, res) => {
   res.send(todolist);
 });
 
-
 /**====================================================================================================
  * POST
 ====================================================================================================*/
@@ -55,7 +54,6 @@ app.post('/api/todolists', (req, res) => {
     console.log('=== ',todolists );
     res.send(todolist)
 });
-
 
 /**====================================================================================================
  * PUT 
@@ -88,14 +86,11 @@ app.put('/api/todolists/:id', (req, res) => {
 app.delete('/api/todolists/:id', (req, res) => {
 
   const todolist = todolists.find( c => c.id === parseInt(req.params.id));
-  
   // si il na pas d'id, erreur 404
   if(!todolist){
     res.status(404).send('manque id');
   } 
 
-  //delete
-  
   // La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau
   const index = todolists.indexOf(todolist);
   // splite permet de diviser une chaine à partir d'un séparateurs
@@ -115,7 +110,6 @@ function validateTodolist(todolist){
     // il faut que le name, a minimum 3 caractère
     name: Joi.string().min(3).required()
   }
-
   return Joi.validate(todolist, schema);
 }
 
