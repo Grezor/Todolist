@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #0984e3;
+  background: #34495e;
   color: #fff;
   font-family: Lato, sans-serif;
 }
@@ -218,13 +218,19 @@ ul li.editMode label {
   font-size: 12px;
 }
 
-.done{
-  background-color: #34495e;
+/* .done{
+  background-color: rgb(121, 191, 209);
   color: #fff;
-}
+} */
 
 
 .toto{
   color: red;
 text-decoration: underline;
+}
+
+h3 {
+  color: #fff;
+  font-size: 20px;
+  border-bottom-color: #fff;
 }
