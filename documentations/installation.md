@@ -29,4 +29,7 @@ Une fois sur votre ordinateur, rendez vous dans le projet afin de pouvoir compre
 
 ## Vous rencontrez des problèmes ? :
 
+n'hésiter pas a vous diriger vers issues, et de crée une issue afin de pouvoir corrigé le problème. 
+
+
   

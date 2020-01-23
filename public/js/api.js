@@ -9,6 +9,7 @@ const app = document.getElementById('todo')
 const container = document.createElement('ul')
 container.setAttribute('id', 'incomplete-tasks')
 app.appendChild(container);
+
 // container Terminer
 const appdone = document.getElementById('done')
 const containerDone = document.createElement('ul')
@@ -17,6 +18,7 @@ appdone.appendChild(containerDone)
 
 // evenement
 AjouterTache.addEventListener("click", addTasks);
+// Si on appuie sur la touche entrée dans l'input pour ajouter une tache
 InputTache.addEventListener("keypress", addlistAfterKey);
 
 render();
@@ -64,12 +66,15 @@ function APIadd(taskValue) {
             render();
         }
     };
-
+    // envoie les donnees en json
     request.send(JSON.stringify({
         name: taskValue
     }));
 }
-
+/**
+ * Function pour éditer une tache q
+ * @param {*} event 
+ */
 function APIedit(event) {
     if (event.keyCode === 13) {
         const id = parseInt(event.target.parentNode.dataset.id)
@@ -189,9 +194,12 @@ function refreshTodoList(data) {
 function APIClickDeleteTasks(event) {
     const id = parseInt(event.target.parentNode.dataset.id)
     var request = new XMLHttpRequest();
+    
     request.open('DELETE', serverUrl + '/api/todolists/' + id, true);
     request.setRequestHeader("Content-Type", "application/json");
+    console.log('%c delete ', 'background: #222; color: #e74c3c; font-size:30px;');
     request.onload = function () {
+        // si l'erreur est supérieur a 200 et inférieur a 400
         if (request.status >= 200 && request.status < 400) {
             render();
         }
@@ -220,12 +228,14 @@ function render() {
 function addTasks() {
     var taskValue = document.getElementById("new-task").value;
     APIadd(taskValue);
-    console.log('%c Ajout ', 'background: #222; color: #bada55; font-size:30px;');
-    // console.log(obj);
-    // console.log(jsonObjet);
+    console.log('%c Ajout => a faire', 'background: #222; color: #bada55; font-size:30px;');
 }
 
-
+/**
+ * quand on click sur edit, ca rajoute un input de type block
+ * 
+ * @param {*} event 
+ */
 function listenerClicEdit(event) {
     const input = event.target.parentNode.querySelector('input[type="text"]');
     input.style.display = "block";
@@ -235,24 +245,24 @@ function listenerClicEdit(event) {
 /**
  * Tache en cours
  */
-var taskIncomplete = function () {
-    console.log("===================== Tache INCOMPLETE ===================== ");
-    var listeItem = this.parentNode;
-    incompleteTache.appendChild(listeItem);
-    bindTaskEvents(listeItem, TerminerTache);
-}
+// var taskIncomplete = function () {
+//    
+//     var listeItem = this.parentNode;
+//     incompleteTache.appendChild(listeItem);
+//     bindTaskEvents(listeItem, TerminerTache);
+// }
 
-var bindTaskEvents = function (tasklisteItem, checkBoxEventHandler) {
-    console.log("bind list item events");
+// var bindTaskEvents = function (tasklisteItem, checkBoxEventHandler) {
+//     console.log("bind list item events");
 
-    var checkBox = tasklisteItem.querySelector("input[type=checkbox]");
-    var ButtonEdit = tasklisteItem.querySelector("button.edit");
-    var ButtonSupprimer = tasklisteItem.querySelector("button.delete");
+//     var checkBox = tasklisteItem.querySelector("input[type=checkbox]");
+//     var ButtonEdit = tasklisteItem.querySelector("button.edit");
+//     var ButtonSupprimer = tasklisteItem.querySelector("button.delete");
 
-    ButtonEdit.onclick = editerTache;
-    ButtonSupprimer.onclick = supprimerTache;
-    checkBox.onchange = checkBoxEventHandler;
-}
+//     ButtonEdit.onclick = editerTache;
+//     ButtonSupprimer.onclick = supprimerTache;
+//     checkBox.onchange = checkBoxEventHandler;
+// }
 
 function validateTodolist(todolist) {
     const schema = {
@@ -282,7 +292,6 @@ var sendDate = function () {
 function addlistAfterKey(event) {
     if (inputlength() > 0 && event.which === 13) {
         addTasks();
-
     }
 }
 

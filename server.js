@@ -2,11 +2,16 @@ const Joi = require('joi')
 const express = require('express')
 const app = express()
 
+
 // tableau de ma todo (sans bdd)
 const todolists = [
-  {id: 1, name: 'test1',done: true,  created: Date.now()},
-  {id: 2, name: 'test2',done: false,  created: Date.now()},
-  {id: 3, name: 'test3',done: true, created: Date.now()}
+  {id: 1, name: 'tache 1',done: true,   created: Date(Date.now())},
+  {id: 2, name: 'tache 2',done: false,  created: Date(Date.now())},
+  {id: 3, name: 'tache 3',done: true,   created: Date(Date.now())},
+  {id: 4, name: 'tache 4',done: false,  created: Date(Date.now())},
+  {id: 5, name: 'tache 5',done: false,  created: Date(Date.now())},
+  {id: 6, name: 'tache 6',done: true,   created: Date(Date.now())}
+
 ];
 
 app.use(express.static('./public'))
@@ -34,11 +39,13 @@ app.get('/api/todolists/:id', (req, res) => {
 
 /**====================================================================================================
  * POST
+ * 
 ====================================================================================================*/
+
 app.post('/api/todolists', (req, res) => {
   const { error } = validateTodolist(req.body); 
 
-  if (error){ // !req.body.name || req.body.name.length < 3
+  if (error){
     res.status(400).send(error.details[0].message)
     return;
   }
@@ -47,14 +54,16 @@ app.post('/api/todolists', (req, res) => {
       id: todolists.length + 1,
       name: req.body.name,
       done : false,
-      created: Date.now()
+      created: Date(Date.now())
 
     };
 
     todolists.push(todolist);
     console.log(todolists.length, 'valeur dans le tableau todoLists');
     console.log('=== ',todolists );
+   
     res.send(todolist)
+    
 });
 
 /**====================================================================================================
@@ -71,7 +80,8 @@ app.put('/api/todolists/:id', (req, res) => {
 
   const { error } = validateTodolist(req.body); 
 
-  if (error){ // !req.body.name || req.body.name.length < 3
+  if (error){ 
+    // !req.body.name || req.body.name.length < 3
     res.status(400).send(error.details[0].message)
     return;
   }
@@ -85,6 +95,7 @@ app.put('/api/todolists/:id', (req, res) => {
 
 /**====================================================================================================
  * API DELETE - Supprime une tache 
+ * @param {id}
 ====================================================================================================*/
 app.delete('/api/todolists/:id', (req, res) => {
 

@@ -1,8 +1,8 @@
-- pour lancer le server : npm start (dependances supervisor)
+- pour lancer le server : npm start 
 
 # Todo List :
 ## Routes : 
-## Dependencies
+## Dependencies :
 ## Projets :
 ## API
 ## l'architecture :
