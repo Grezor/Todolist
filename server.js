@@ -75,6 +75,7 @@ app.put('/api/todolists/:id', (req, res) => {
   }
 
   todolist.name = req.body.name;
+  todolist.done = !!req.body.done;
   console.log("id :  " +  req.params.id + " mis a jour ");
   res.send(todolist)
 });
