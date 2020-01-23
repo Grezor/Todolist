@@ -4,9 +4,9 @@ const app = express()
 
 // tableau de ma todo (sans bdd)
 const todolists = [
-  {id: 1, name: 'test1',done: true},
-  {id: 2, name: 'test2',done: false},
-  {id: 3, name: 'test3',done: true}
+  {id: 1, name: 'test1',done: true,  created: Date.now()},
+  {id: 2, name: 'test2',done: false,  created: Date.now()},
+  {id: 3, name: 'test3',done: true, created: Date.now()}
 ];
 
 app.use(express.static('./public'))
@@ -46,7 +46,9 @@ app.post('/api/todolists', (req, res) => {
   const todolist = {
       id: todolists.length + 1,
       name: req.body.name,
-      done : true
+      done : false,
+      created: Date.now()
+
     };
 
     todolists.push(todolist);
@@ -73,8 +75,9 @@ app.put('/api/todolists/:id', (req, res) => {
     res.status(400).send(error.details[0].message)
     return;
   }
-
-  todolist.name = req.body.name;
+// si il existe pas ou tu enleve todolist name
+  todolist.name = req.body.name || todolist.name;
+  todolist.done = req.body.done;
   console.log("id :  " +  req.params.id + " mis a jour ");
   res.send(todolist)
 });
@@ -108,9 +111,15 @@ function validateTodolist(todolist){
 
   const schema = {
     // il faut que le name, a minimum 3 caractère
-    name: Joi.string().min(3).required()
+    name: Joi.string().min(3).optional(),
+    done: Joi.bool().optional()
   }
-  return Joi.validate(todolist, schema);
+
+  const schemaDone = {
+    // il faut que le name, a minimum 3 caractère
+    done: Joi.bool().required()
+  }
+  return Joi.validate(todolist, schema) ;
 }
 
 

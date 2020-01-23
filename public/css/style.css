@@ -151,6 +151,7 @@ li>label {
   /* font-size: 20px; */
 }
 
+
 /* Edit Task */
 ul li input[type="text"] {
   display: none;
@@ -164,7 +165,19 @@ ul li.editMode label {
   display: none;
 }
 
+/**
+* Quand la tache est terminer
+*/
+ul li.ClassFinish label{
+  text-decoration: line-through;
+  color: #95a5a6;
+  font-size: 20px;
+  text-align: center;
+}
 
+/**
+* Bouton Edit lors de l'ajout.
+*/
 .buttonDelete {
   background-color: #f44336;
   border: none;
@@ -173,9 +186,7 @@ ul li.editMode label {
   text-decoration: none;
   font-size: 12px;
   border-radius: 15%;
-  /* text-align: center; */
-  /* position: absolute; */
-  /* display: inline-block; */
+
 }
 
 .buttonDelete:hover {
@@ -201,10 +212,6 @@ ul li.editMode label {
 
   font-size: 12px;
   border-radius: 15%;
-  /* display: inline-block; */
-  /* position: absolute; */
-  /* text-align: right; */
-  /* float: right; */
 }
 
 .buttonEdit:hover {
@@ -218,19 +225,10 @@ ul li.editMode label {
   font-size: 12px;
 }
 
-/* .done{
-  background-color: rgb(121, 191, 209);
-  color: #fff;
-} */
-
-
-.toto{
-  color: red;
-text-decoration: underline;
-}
 
 h3 {
   color: #fff;
   font-size: 20px;
   border-bottom-color: #fff;
 }
+
