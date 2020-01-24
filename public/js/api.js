@@ -22,7 +22,9 @@ AjouterTache.addEventListener("click", addTasks);
 InputTache.addEventListener("keypress", addlistAfterKey);
 
 render();
-
+/**
+ * Api delete, qui supprime une tache
+ */
 function APIdelete() {
     var request = new XMLHttpRequest();
     request.open('DELETE', serverUrl + '/api/todolists/', true);

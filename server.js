@@ -1,9 +1,12 @@
-const Joi = require('joi')
 const express = require('express')
 const app = express()
 
 
 // tableau de ma todo (sans bdd)
+/**
+ * Todolist est un tableau d'objet : 
+ *   - id, name, done, created_at
+ */
 const todolists = [{
     id: 1,
     name: 'tache 1',
@@ -121,7 +124,7 @@ app.put('/api/todolists/:id', (req, res) => {
   // si il existe pas ou tu enleve todolist name
   todolist.name = req.body.name || todolist.name;
   todolist.done = req.body.done;
-  console.log("id :  " + req.params.id + " mis a jour ");
+  console.log("id :  " + req.params.id + " mis a jour ")
   res.send(todolist)
 });
 
