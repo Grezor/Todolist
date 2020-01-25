@@ -158,7 +158,6 @@ app.delete('/api/todolists/:id', (req, res) => {
  * @param {*} todolist 
  */
 function validateTodolist(todolist) {
-
   const nameValid = !todolist.hasOwnProperty('name') || todolist.name instanceof String && todolist.name.length >= 3
   const doneValid = !todolist.hasOwnProperty('done') || todolist.done instanceof Boolean
   return nameValid && doneValid
