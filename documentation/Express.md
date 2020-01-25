@@ -1,9 +1,15 @@
 # Routes : 
 ## methode Get : 
 - affiche **id** de la taches
-![carbon](https://user-images.githubusercontent.com/38507456/73122564-c3b7ed80-3f86-11ea-94ad-936090ad817f.png)
+```javascript
+app.get('/api/todolists/:id', (req, res) => {
+  const todolist = todolists.find(c => c.id === parseInt(req.params.id));
+  if (!todolist) res.status(404).send('manque id');
+  res.send(todolist);
+});
+```
 
-## methode Get : 
+
 - affiche toute les taches a faire, ainsi que les taches terminé
 ![carbon (1)](https://user-images.githubusercontent.com/38507456/73122567-d6cabd80-3f86-11ea-8b40-18b3b96fa199.png)
 
