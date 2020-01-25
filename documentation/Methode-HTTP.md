@@ -6,12 +6,7 @@ Les API REST sont basées sur le HTTP, ce qui signifie **Hypertext Transfer Prot
 
 - Ce sont des méthodes qui définissent les requêtes que le client peut effectuer dont (GET, PUT, POST, DELETE), et encore plus. 
 
-## les methodes : 
 
-- GET : GET est la méthode la plus utilisée pour les requêtes HTTP
-- POST : On utilise POST pour envoyer des données dans une requête et souvent pour l’ajouter à la ressource précisée dans la partie URI de la première ligne de la requête
-- PUT : 
-- DELETE : vous dites que vous voulez supprimer la ressource donnée dans l’URI
 
 ## Les codes : 
 
