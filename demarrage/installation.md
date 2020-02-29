@@ -26,6 +26,7 @@ Une fois sur votre ordinateur, rendez vous dans le projet afin de pouvoir compre
     Mon serveur fonctionne sur http://localhost:1472
   ```
   - Vous pouvez maintenant voir le projet et l'utiliser, n'hésitez pas a naviguer.
+  - Vous pouvez cliquez sur http://localhost:1472 pour l'ouvrir dans votre navigateur
 
 ## Vous rencontrez des problèmes ? :
 
