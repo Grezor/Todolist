@@ -20,5 +20,6 @@ Mais aussi de pouvoir éditer une tache, et de passer la tache en terminer.
 Installation : 
 
 Comment voir le projet : 
-
-npm start dans un terminal
+Il est possible de voir le projet a cette adresse : 
+mais aussi :
+    - npm start dans un terminal
