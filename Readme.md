@@ -16,3 +16,9 @@ Mais aussi de pouvoir éditer une tache, et de passer la tache en terminer.
 | Outils                    | [Documentation Outils](https://github.com/Grezor/TodoList/)       |
 | Couleur                   | [Documentation Couleur](https://github.com/Grezor/TodoList/)      |
 | Documention technique     | [Documentation Documention technique](https://github.com/Grezor/TodoList/)      |
+
+Installation : 
+
+Comment voir le projet : 
+
+npm start dans un terminal
