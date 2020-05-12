@@ -1,16 +1,21 @@
-# Todo List :
+# Todo List 
+
+## ▶️ Présentation :
 Suite a ma formation en alternance, mon entreprise ma demandé de réaliser une todoList. Avec les langages Javascript, et NodeJS
-La todoList utilise des API avec le socket Express, avec des routes pour ajouter ou bien de supprimer des taches. 
-Mais aussi de pouvoir éditer une tache, et de passer la tache en terminer.
+La todoList utilise des API avec le socket Express. Des routes pour ajouter ou supprimer des taches. Mais également de pouvoir éditer 
+une tache, ou de la passer en terminer.
 
-## Technologie : 
-- Javascript
-- NodeJS
-- CSS 
+## ▶️ Technologie : 
+    - Javascript
+    - NodeJS
+    - CSS 
 
+## ▶️ Requis :
+Pour faire fonctionner cette todolist, il vous faudra d'installer :
+    - NodeJS [Installation](https://nodejs.org/en/)
+    - Postman [Installation](https://www.postman.com/downloads/)
 
-## liens utiles
-
+## ▶️ Ressources :
 | Documentation             | liens                                                             |
 | --------------------------| ------------------------------------------------------------------|
 | Demarrage                 | [Documentation Demmarage](https://github.com/Grezor/TodoList/)    |
@@ -20,10 +25,9 @@ Mais aussi de pouvoir éditer une tache, et de passer la tache en terminer.
 | Outils                    | [Documentation Outils](https://github.com/Grezor/TodoList/)       |
 | Couleur                   | [Documentation Couleur](https://github.com/Grezor/TodoList/)      |
 | Documention technique     | [Documentation Documention technique](https://github.com/Grezor/TodoList/)      |
+## ▶️ Tests :
 
-Installation : 
+Dans la suite, je souhaite faire des tests unitaires, vérifier sont fonctionnement.
 
-Comment voir le projet : 
-Il est possible de voir le projet a cette adresse : 
-mais aussi :
-    - npm start dans un terminal
+## ▶️ Auteur
+- **Duplessi Geoffrey** 
