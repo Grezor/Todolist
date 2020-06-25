@@ -1,7 +1,7 @@
 const InputTache = document.getElementById("new-task");
 const AjouterTache = document.querySelector("button");
-const incompleteTache = document.getElementById("incomplete-tasks");
-const completeTache = document.getElementById("completed-tasks");
+// const incompleteTache = document.getElementById("incomplete-tasks");
+// const completeTache = document.getElementById("completed-tasks");
 const serverUrl = 'http://localhost:1472';
 // container a faire
 const app = document.getElementById('todo')
@@ -41,19 +41,19 @@ render();
  * Call fonction post 
  * > tache terminer
  */
-function APIPostCompleted() {
-    const id = parseInt(event.target.parentNode.dataset.id)
-    const request = new XMLHttpRequest();
+// function APIPostCompleted() {
+//     const id = parseInt(event.target.parentNode.dataset.id)
+//     const request = new XMLHttpRequest();
 
-    request.open('POST', serverUrl + '/api/todolists/' + id, true);
-    request.setRequestHeader("Content-Type", "application/json");
-    request.onload = function () {
-        if (request.status >= 200 && request.status < 400) {
-            render();
-        }
-    }
-    // request.send(JSON.stringify({ name: event.target.value }));
-}
+//     request.open('POST', serverUrl + '/api/todolists/' + id, true);
+//     request.setRequestHeader("Content-Type", "application/json");
+//     request.onload = function () {
+//         if (request.status >= 200 && request.status < 400) {
+//             render();
+//         }
+//     }
+//     // request.send(JSON.stringify({ name: event.target.value }));
+// }
 
 function APIadd(taskValue) {
     var request = new XMLHttpRequest();
