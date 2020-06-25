@@ -1,8 +1,5 @@
 const express = require('express')
 const app = express()
-
-
-// tableau de ma todo (sans bdd)
 /**
  * Todolist est un tableau d'objet : 
  *   - id, name, done, created_at
@@ -150,7 +147,6 @@ app.delete('/api/todolists/:id', (req, res) => {
   res.send(todolist)
 });
 
-
 /**
  * Function qui vérifie la todo
  * la méthode HasOwnProperty retourne un booléen indiquant si l'objet possède la propriété spécifique
@@ -163,18 +159,11 @@ function validateTodolist(todolist) {
   return nameValid && doneValid
 }
 
-
-
-
-
-
-
-
 /**==================================================
  * >>>>>> CONNEXION AU SERVEUR 
 ==================================================*/
 const port = 1472;
-hostname = 'localhost';
+const hostname = 'localhost';
 app.listen(port, hostname, function () {
   console.log("Mon serveur fonctionne sur http://" + hostname + ":" + port + "\n");
 })

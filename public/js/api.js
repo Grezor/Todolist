@@ -1,15 +1,13 @@
-var InputTache = document.getElementById("new-task");
-var AjouterTache = document.querySelector("button");
-var incompleteTache = document.getElementById("incomplete-tasks");
-var completeTache = document.getElementById("completed-tasks");
-var serverUrl = 'http://localhost:1472';
-
+const InputTache = document.getElementById("new-task");
+const AjouterTache = document.querySelector("button");
+const incompleteTache = document.getElementById("incomplete-tasks");
+const completeTache = document.getElementById("completed-tasks");
+const serverUrl = 'http://localhost:1472';
 // container a faire
 const app = document.getElementById('todo')
 const container = document.createElement('ul')
 container.setAttribute('id', 'incomplete-tasks')
 app.appendChild(container);
-
 // container Terminer
 const appdone = document.getElementById('done')
 const containerDone = document.createElement('ul')
@@ -25,20 +23,20 @@ render();
 /**
  * Api delete, qui supprime une tache
  */
-function APIdelete() {
-    var request = new XMLHttpRequest();
-    request.open('DELETE', serverUrl + '/api/todolists/', true);
-    request.setRequestHeader("Content-Type", "application/json");
+// function APIdelete() {
+//     var request = new XMLHttpRequest();
+//     request.open('DELETE', serverUrl + '/api/todolists/', true);
+//     request.setRequestHeader("Content-Type", "application/json");
 
-    const todolist = todolists.find(c => c.id === parseInt(request.params.id));
-    const index = todolists.indexOf(todolist);
+//     const todolist = todolists.find(c => c.id === parseInt(request.params.id));
+//     const index = todolists.indexOf(todolist);
 
-    todolists.splice(index, 1);
+//     todolists.splice(index, 1);
 
-    console.log("id :  " + request.params.id + " ========== element supprimer ");
+//     console.log("id :  " + request.params.id + " ========== element supprimer ");
 
-    request.send(todolist)
-}
+//     request.send(todolist)
+// }
 /**
  * Call fonction post 
  * > tache terminer
@@ -182,15 +180,10 @@ function refreshTodoList(data) {
             BtnDelete.addEventListener('click', APIClickDeleteTasks)
             BtnDelete.className = 'buttonDelete';
 
-       
-
             li.appendChild(BtnEdit);
             li.appendChild(BtnDelete);
         }
     });
-
-
-
 }
 
 function APIClickDeleteTasks(event) {
@@ -220,7 +213,7 @@ function render() {
             const data = JSON.parse(this.response);
             refreshTodoList(data);
         } else {
-            statusError();
+            // statusError();
         }
     }
     request.send();
@@ -266,30 +259,7 @@ function listenerClicEdit(event) {
 //     checkBox.onchange = checkBoxEventHandler;
 // }
 
-function validateTodolist(todolist) {
-    const schema = {
-        // il faut que le name, a minimum 3 caractère
-        name: Joi.string().min(3).required()
-    }
-    return Joi.validate(todolist, schema);
-}
-
-
-var sendDate = function () {
-    var Inputext = document.getElementById('new-task');
-    todolist.push(Inputext);
-    var pval = "";
-    for (i = 0; i < todolist.length; i++) {
-        pval = pval + todolist[i];
-    }
-
-    document.getElementById('incomplete-tasks').innerHTML = pval;
-    console.log(todolist);
-}
-
 /**======================= Function de fonctionnalité ========================*/
-
-
 // Si on appuie sur entrer dans l'input
 function addlistAfterKey(event) {
     if (inputlength() > 0 && event.which === 13) {
@@ -300,33 +270,3 @@ function addlistAfterKey(event) {
 function inputlength() {
     return InputTache.value.length;
 }
-
-function addToucheEnter() {
-    if (inputlength() > 0) {
-        createListElement();
-    }
-}
-
-
-
-
-//   //Cycle over CompleteTassHolder ul list items
-//   for(var i = 0; i < completedTasksHolder.todolists.length; i++){
-//     bindTaskEvents(completedTasksHolder.todolists[i], tasksIncomplete)
-//   }
-
-// function finishTasks(){
-//     var request = new XMLHttpRequest();
-//     const todolist = todolists.find( c => c.id === parseInt(req.params.id));
-//     // si il na pas d'id, erreur 404
-//     if(!todolist){
-//         res.status(404).send('manque id');
-//     } 
-//     // La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau
-//     const index = todolists.indexOf(todolist);
-//     // splite permet de diviser une chaine à partir d'un séparateurs
-//     todolists.splice(index, 1);
-//     // return la list du tableau
-//     console.log("id :  " +  req.params.id + " ========== element supprimer ");
-//     res.send(todolist)
-// }
