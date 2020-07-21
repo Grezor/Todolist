@@ -21,11 +21,12 @@
     "coverage": "^0.4.1",
     "express": "^4.17.1",
     "markdown": "^0.5.0",
+    "npm-check-updates": "^7.0.2",
     "socket.io": "^2.3.0",
     "supervisor": "^0.12.0"
   },
   "devDependencies": {
-    "eslint": "^7.3.1",
+    "eslint": "^7.5.0",
     "mocha": "^8.0.1",
     "nodemon": "^2.0.4",
     "nyc": "^15.1.0"
