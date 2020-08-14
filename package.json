@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "todolists",
   "version": "1.0.0",
@@ -31,3 +32,39 @@
     "nyc": "^15.1.0"
   }
 }
+=======
+{
+  "name": "todolists",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "nyc mocha --reporter=lcov --reporter=text-summary ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grezor/TodoLists.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grezor/TodoLists/issues"
+  },
+  "homepage": "https://github.com/Grezor/TodoLists#readme",
+  "dependencies": {
+    "coverage": "^0.4.1",
+    "express": "^4.17.1",
+    "markdown": "^0.5.0",
+    "npm-check-updates": "^7.0.2",
+    "socket.io": "^2.3.0",
+    "supervisor": "^0.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0"
+  }
+}
+>>>>>>> 3a42c062eadece66b0f9d55ab9b408a60a7d5ce4
