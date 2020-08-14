@@ -20,40 +20,6 @@ AjouterTache.addEventListener("click", addTasks);
 InputTache.addEventListener("keypress", addlistAfterKey);
 
 render();
-/**
- * Api delete, qui supprime une tache
- */
-// function APIdelete() {
-//     var request = new XMLHttpRequest();
-//     request.open('DELETE', serverUrl + '/api/todolists/', true);
-//     request.setRequestHeader("Content-Type", "application/json");
-
-//     const todolist = todolists.find(c => c.id === parseInt(request.params.id));
-//     const index = todolists.indexOf(todolist);
-
-//     todolists.splice(index, 1);
-
-//     console.log("id :  " + request.params.id + " ========== element supprimer ");
-
-//     request.send(todolist)
-// }
-/**
- * Call fonction post 
- * > tache terminer
- */
-// function APIPostCompleted() {
-//     const id = parseInt(event.target.parentNode.dataset.id)
-//     const request = new XMLHttpRequest();
-
-//     request.open('POST', serverUrl + '/api/todolists/' + id, true);
-//     request.setRequestHeader("Content-Type", "application/json");
-//     request.onload = function () {
-//         if (request.status >= 200 && request.status < 400) {
-//             render();
-//         }
-//     }
-//     // request.send(JSON.stringify({ name: event.target.value }));
-// }
 
 function APIadd(taskValue) {
     var request = new XMLHttpRequest();
@@ -93,9 +59,10 @@ function APIedit(event) {
         }));
     }
 }
-
+/**
+ * @param {*} event 
+ */
 function APIDoneTask(event) {
-
     const id = parseInt(event.target.parentNode.dataset.id)
     const request = new XMLHttpRequest();
 
@@ -110,9 +77,10 @@ function APIDoneTask(event) {
     request.send(JSON.stringify({
         done: true
     }));
-
 }
-
+/**
+ * @param {*} data 
+ */
 function refreshTodoList(data) {
 
     container.innerHTML = '';
@@ -149,15 +117,12 @@ function refreshTodoList(data) {
 
         // si c'est pas terminer j'ajoute
         if (!afaire.done) {
-
             const input = document.createElement('INPUT')
             input.setAttribute("type", "checkbox")
             input.setAttribute('class', 'checkbox')
             input.className = 'checkbox'
             input.addEventListener("change", APIDoneTask)
-
             li.appendChild(input);
-
         }
 
         li.appendChild(label);
@@ -223,7 +188,10 @@ function render() {
 function addTasks() {
     var taskValue = document.getElementById("new-task").value;
     APIadd(taskValue);
-    console.log('%c Ajout => a faire', 'background: #222; color: #bada55; font-size:30px;');
+}
+
+function deleteTaskFinished(){
+    var taskFinish = document.getElementById("done").done
 }
 
 /**

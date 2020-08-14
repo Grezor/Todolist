@@ -5,13 +5,9 @@ Suite a ma formation en alternance, mon entreprise ma demandé de réaliser une 
 La todoList utilise des API avec le socket Express. Des routes pour ajouter ou supprimer des taches. Mais également de pouvoir éditer 
 une tache, ou de la passer en terminer.
 
-## Technologie 
-    - Javascript
-    - NodeJS
-    - CSS 
-
 ## Requis 
 Pour faire fonctionner cette todolist, il vous faudra d'installer :
+    
     - NodeJS [Installation](https://nodejs.org/en/)
     - Postman [Installation](https://www.postman.com/downloads/)
 
@@ -31,6 +27,11 @@ Pour faire fonctionner cette todolist, il vous faudra d'installer :
 Dans la suite, je souhaite faire des tests unitaires, vérifier sont fonctionnement.
 
 ---
+
+## Technologie 
+    - Javascript
+    - NodeJS
+    - CSS 
 **Duplessi Geoffrey** 
 > GitHub [@Grezor][4]
 
