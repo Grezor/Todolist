@@ -6,32 +6,9 @@ La todoList utilise des API avec le socket Express. Des routes pour ajouter ou s
 une tache, ou de la passer en terminer.
 
 ## Requis 
-Pour faire fonctionner cette todolist, il vous faudra d'installer :
-    
-    - NodeJS [Installation](https://nodejs.org/en/)
-    - Postman [Installation](https://www.postman.com/downloads/)
 
 ## Ressources 
-| Documentation             | liens                                                             |
-| --------------------------| ------------------------------------------------------------------|
-| Demarrage                 |     |
-| Routes                    | [Routes ](https://github.com/Grezor/TodoList/)      |
-| Functions                 | [Functions](https://github.com/Grezor/TodoList/)    |
-| L'architecture            | [Architecture](https://github.com/Grezor/TodoList/) |
-| Outils                    | [Outils](https://github.com/Grezor/TodoList/)       |
-| Couleur                   | [Couleur](https://github.com/Grezor/TodoList/)      |
-| Documention technique     | [Documention technique](https://github.com/Grezor/TodoList/)      |
 
-## Tests Unit
-
-Dans la suite, je souhaite faire des tests unitaires, vérifier sont fonctionnement.
-
----
-
-## Technologie 
-    - Javascript
-    - NodeJS
-    - CSS 
 **Duplessi Geoffrey** 
 > GitHub [@Grezor][4]
 
