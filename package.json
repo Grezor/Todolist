@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "nyc mocha --reporter=lcov --reporter=text-summary ava"
   },
   "repository": {
