@@ -14,7 +14,7 @@ Pour faire fonctionner cette todolist, il vous faudra d'installer :
 ## Ressources 
 | Documentation             | liens                                                             |
 | --------------------------| ------------------------------------------------------------------|
-| Demarrage                 | [Demmarage](https://github.com/Grezor/TodoList/)    |
+| Demarrage                 |     |
 | Routes                    | [Routes ](https://github.com/Grezor/TodoList/)      |
 | Functions                 | [Functions](https://github.com/Grezor/TodoList/)    |
 | L'architecture            | [Architecture](https://github.com/Grezor/TodoList/) |
