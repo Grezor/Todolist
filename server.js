@@ -161,7 +161,8 @@ function validateTodolist(todolist) {
 /**==================================================
  * >>>>>> CONNEXION AU SERVEUR 
 ==================================================*/
-const PORT = process.env.PORT || '5000';
+const port = 1472;
 const hostname = 'localhost';
-app.listen(PORT, hostname, function () {
+app.listen(port, hostname, function () {
+  console.log("Mon serveur fonctionne sur http://" + hostname + ":" + port + "\n");
 })

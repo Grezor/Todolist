@@ -5,6 +5,13 @@ Suite a ma formation en alternance, mon entreprise ma demandé de réaliser une 
 La todoList utilise des API avec le socket Express. Des routes pour ajouter ou supprimer des taches. Mais également de pouvoir éditer 
 une tache, ou de la passer en terminer.
 
+## Démarrage : 
+Ces instrutions vous permettons de prendre connaissance des pré-requis et d'installer le projet afin de pouvoir développer et tester localement.
+
+## Auteurs : 
+
+## License :
+
 **Duplessi Geoffrey** 
 > GitHub [@Grezor][4]
 
