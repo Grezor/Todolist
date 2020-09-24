@@ -2,12 +2,12 @@
   "name": "todolists",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
     "node": "12.11.1"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon server.js",
     "test": "nyc mocha --reporter=lcov --reporter=text-summary ava"
   },
   "repository": {

@@ -21,9 +21,12 @@ InputTache.addEventListener("keypress", addlistAfterKey);
 
 render();
 
+/**
+ * Function pour ajouter une tache
+ * @param {*} taskValue 
+ */
 function APIadd(taskValue) {
     var request = new XMLHttpRequest();
-
     request.open('POST', serverUrl + '/api/todolists/', true);
     request.setRequestHeader("Content-Type", "application/json");
     request.onload = function () {
@@ -37,6 +40,7 @@ function APIadd(taskValue) {
         name: taskValue
     }));
 }
+
 /**
  * Function pour éditer une tache q
  * @param {*} event 
@@ -59,6 +63,7 @@ function APIedit(event) {
         }));
     }
 }
+
 /**
  * @param {*} event 
  */
@@ -78,11 +83,11 @@ function APIDoneTask(event) {
         done: true
     }));
 }
+
 /**
  * @param {*} data 
  */
 function refreshTodoList(data) {
-
     container.innerHTML = '';
     containerDone.innerHTML = '';
 
@@ -115,7 +120,7 @@ function refreshTodoList(data) {
             container.appendChild(li);
         }
 
-        // si c'est pas terminer j'ajoute
+        // si c'est pas terminer je l'ajoute
         if (!afaire.done) {
             const input = document.createElement('INPUT')
             input.setAttribute("type", "checkbox")
@@ -154,7 +159,7 @@ function refreshTodoList(data) {
 function APIClickDeleteTasks(event) {
     const id = parseInt(event.target.parentNode.dataset.id)
     var request = new XMLHttpRequest();
-    
+
     request.open('DELETE', serverUrl + '/api/todolists/' + id, true);
     request.setRequestHeader("Content-Type", "application/json");
     console.log('%c delete ', 'background: #222; color: #e74c3c; font-size:30px;');
@@ -190,7 +195,7 @@ function addTasks() {
     APIadd(taskValue);
 }
 
-function deleteTaskFinished(){
+function deleteTaskFinished() {
     var taskFinish = document.getElementById("done").done
 }
 
