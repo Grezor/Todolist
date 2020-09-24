@@ -119,7 +119,7 @@ app.put('/api/todolists/:id', (req, res) => {
   // si il existe pas ou tu enleve todolist name
   todolist.name = req.body.name || todolist.name;
   todolist.done = req.body.done;
-  console.log("id :  " + req.params.id + " tache terminer")
+  console.log("id :  " + req.params.id + " update")
   res.send(todolist)
 });
 
@@ -160,7 +160,7 @@ function validateTodolist(todolist) {
 /**==================================================
  * >>>>>> CONNEXION AU SERVEUR 
 ==================================================*/
-const port = 1472;
+const port = 3000;
 const hostname = 'localhost';
 app.listen(port, hostname, function () {
   console.log("Mon serveur fonctionne sur http://" + hostname + ":" + port + "\n");

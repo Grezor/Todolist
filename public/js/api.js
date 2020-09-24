@@ -2,7 +2,7 @@ const InputTache = document.getElementById("new-task");
 const AjouterTache = document.querySelector("button");
 // const incompleteTache = document.getElementById("incomplete-tasks");
 // const completeTache = document.getElementById("completed-tasks");
-const serverUrl = 'http://localhost:1472';
+const serverUrl = 'http://localhost:3000';
 // container a faire
 const app = document.getElementById('todo')
 const container = document.createElement('ul')
