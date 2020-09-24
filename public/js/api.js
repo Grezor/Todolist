@@ -114,7 +114,16 @@ function refreshTodoList(data) {
         if (afaire.done) {
             // la tache est en terminer
             containerDone.appendChild(li);
+            // on lui donne la classe finish
             li.className = 'ClassFinish'
+            // creation du bouton delete
+            const BtnDelete = document.createElement('INPUT')
+            BtnDelete.setAttribute("type", "button");
+            BtnDelete.setAttribute("value", "DELETE");
+            BtnDelete.setAttribute('class', 'btn');
+            BtnDelete.addEventListener('click', APIClickDeleteTasks)
+            BtnDelete.className = 'buttonDeleteleft';
+            li.appendChild(BtnDelete);
         } else {
             // sinon elle reste a faire
             container.appendChild(li);
@@ -155,7 +164,10 @@ function refreshTodoList(data) {
         }
     });
 }
-
+/**
+ * DELETE
+ * @param {*} event 
+ */
 function APIClickDeleteTasks(event) {
     const id = parseInt(event.target.parentNode.dataset.id)
     var request = new XMLHttpRequest();

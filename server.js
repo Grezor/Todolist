@@ -91,7 +91,6 @@ app.post('/api/todolists', (req, res) => {
   todolists.push(todolist);
   console.log(todolists.length, 'valeur dans le tableau todoLists');
   console.log('=== ', todolists);
-
   res.send(todolist)
 
 });
@@ -120,7 +119,7 @@ app.put('/api/todolists/:id', (req, res) => {
   // si il existe pas ou tu enleve todolist name
   todolist.name = req.body.name || todolist.name;
   todolist.done = req.body.done;
-  console.log("id :  " + req.params.id + " mis a jour ")
+  console.log("id :  " + req.params.id + " tache terminer")
   res.send(todolist)
 });
 

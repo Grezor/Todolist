@@ -4,21 +4,23 @@
 }
 
 body {
-  background: #34495e;
+  background: #354057 !important;
   color: #fff;
-  font-family: Lato, sans-serif;
+  padding: 30px;
 }
 
 .container {
   display: block;
-  width: 600px;
+  width: 700px;
   margin: 10px auto 0;
+  background-color: #354057;
+  border-radius: 5px;
 }
 
-ul {
+/* ul {
   margin: 0;
   padding: 0;
-}
+} */
 
 li * {
   float: left;
@@ -36,7 +38,7 @@ label[for="new-task"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
-  border-bottom: 2px solid #333;
+
   margin: 0;
   text-transform: uppercase;
 }
@@ -47,11 +49,11 @@ input[type="text"] {
   line-height: 18px;
   height: 18px;
   padding: 10px;
-  border: 1px solid #ddd;
   background: #fff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  margin-left: 20px;
 }
 
 input[type="text"]:focus {
@@ -70,7 +72,7 @@ label[for="new-task"] {
   line-height: 72px;
   margin: 0 0 24px;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 input#new-task {
@@ -87,7 +89,6 @@ p>button:hover {
 li {
   overflow: hidden;
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
 }
 
 li>input[type="checkbox"] {
@@ -112,9 +113,6 @@ li>label {
 .btn {
   display: inline-block;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   border: 0;
   outline: 0;
   background-color: #00f0a8;
@@ -124,13 +122,6 @@ li>label {
   font-size: 20px;
   border-radius: 30px;
   color: #282d32;
-  cursor: pointer;
-  transition: all .5s;
-  transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .btn:hover {
@@ -185,7 +176,7 @@ ul li.ClassFinish label{
   text-decoration: none;
   font-size: 12px;
   border-radius: 15%;
-
+  margin-left: 20px;
 }
 
 .buttonDelete:hover {
@@ -197,8 +188,18 @@ ul li.ClassFinish label{
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
-}
 
+}
+.buttonDeleteleft{
+  float: none;
+  background-color: #B24449;
+  border: none;
+  color: white;
+  padding: 15px 16px;
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 15px;
+}
 
 .buttonEdit {
   background-color: #27ae60;
@@ -225,9 +226,19 @@ ul li.ClassFinish label{
 }
 
 
-h3 {
-  color: #fff;
+/* h3 {
+  color: #00c4cc;
   font-size: 20px;
+  margin-top: 20px;
+  border-bottom: 30px;
   border-bottom-color: #fff;
-}
+  font-family: 'Courier New', Courier, monospace;
+} */
 
+.TitleStartedFinished{
+  color: #fed330;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}

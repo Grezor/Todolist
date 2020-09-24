@@ -12,6 +12,11 @@ Ces instrutions vous permettons de prendre connaissance des pré-requis et d'ins
 
 ## License :
 
+
+Guide et Standardisation ; 
+
+Api 
+
 **Duplessi Geoffrey** 
 > GitHub [@Grezor][4]
 
