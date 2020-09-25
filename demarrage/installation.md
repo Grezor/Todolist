@@ -23,10 +23,10 @@ Une fois sur votre ordinateur, rendez vous dans le projet afin de pouvoir compre
     [nodemon] watching dir(s): *.*
     [nodemon] watching extensions: js,mjs,json
     [nodemon] starting `node server.js`
-    Mon serveur fonctionne sur http://localhost:1472
+    Mon serveur fonctionne sur http://localhost:3000
   ```
   - Vous pouvez maintenant voir le projet et l'utiliser, n'hésitez pas a naviguer.
-  - Vous pouvez cliquez sur http://localhost:1472 pour l'ouvrir dans votre navigateur
+  - Vous pouvez cliquez sur http://localhost:3000 pour l'ouvrir dans votre navigateur
 
 ## Vous rencontrez des problèmes ? :
 
