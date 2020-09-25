@@ -8,7 +8,6 @@ body {
   color: #fff;
   padding: 30px;
 }
-
 .container {
   display: block;
   width: 700px;
@@ -17,31 +16,16 @@ body {
   border-radius: 5px;
 }
 
-/* ul {
-  margin: 0;
-  padding: 0;
-} */
-
 li * {
   float: left;
 }
 
-li,
+li, */
 h3 {
   clear: both;
   list-style: none;
-}
+} 
 
-
-h3,
-label[for="new-task"] {
-  color: #333;
-  font-weight: 700;
-  font-size: 15px;
-
-  margin: 0;
-  text-transform: uppercase;
-}
 
 input[type="text"] {
   margin: 0;
@@ -52,13 +36,9 @@ input[type="text"] {
   background: #fff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
-  color: #888;
   margin-left: 20px;
 }
 
-input[type="text"]:focus {
-  color: #333;
-}
 
 /* New Task */
 label[for="new-task"] {
@@ -134,11 +114,10 @@ li>label {
   transform: scale(1.05, 1.05);
 }
 
-
+/* Nom de la tache */
 .labelColor {
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  /* font-size: 20px; */
 }
 
 
@@ -177,6 +156,7 @@ ul li.ClassFinish label{
   font-size: 12px;
   border-radius: 15%;
   margin-left: 20px;
+  float: right;
 }
 
 .buttonDelete:hover {
@@ -191,7 +171,7 @@ ul li.ClassFinish label{
 
 }
 .buttonDeleteleft{
-  float: none;
+
   background-color: #B24449;
   border: none;
   color: white;
@@ -209,7 +189,7 @@ ul li.ClassFinish label{
   margin-right: 10px;
   text-align: center;
   text-decoration: none;
-
+  float: right;
   font-size: 12px;
   border-radius: 15%;
 }
@@ -238,7 +218,7 @@ ul li.ClassFinish label{
 .TitleStartedFinished{
   color: #fed330;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
 }

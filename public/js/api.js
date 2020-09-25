@@ -52,6 +52,7 @@ function APIedit(event) {
 
         request.open('PUT', serverUrl + '/api/todolists/' + id, true);
         request.setRequestHeader("Content-Type", "application/json");
+        console.log('edit')
         request.onload = function () {
             if (request.status >= 200 && request.status < 400) {
                 render();
