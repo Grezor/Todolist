@@ -8,6 +8,7 @@ body {
   color: #fff;
   padding: 30px;
 }
+
 .container {
   display: block;
   width: 700px;
@@ -20,11 +21,11 @@ li * {
   float: left;
 }
 
-li, 
+li,
 h3 {
   clear: both;
   list-style: none;
-} 
+}
 
 
 input[type="text"] {
@@ -137,7 +138,7 @@ ul li.editMode label {
 /**
 * Quand la tache est terminer
 */
-ul li.ClassFinish label{
+ul li.ClassFinish label {
   text-decoration: line-through;
   color: #95a5a6;
   font-size: 20px;
@@ -170,7 +171,8 @@ ul li.ClassFinish label{
   font-size: 12px;
 
 }
-.buttonDeleteleft{
+
+.buttonDeleteleft {
 
   background-color: #B24449;
   border: none;
@@ -215,7 +217,7 @@ ul li.ClassFinish label{
   font-family: 'Courier New', Courier, monospace;
 } */
 
-.TitleStartedFinished{
+.TitleStartedFinished {
   color: #fed330;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
