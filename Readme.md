@@ -1,6 +1,6 @@
 # Todo List 
 ![Banner TodoList](https://user-images.githubusercontent.com/38507456/94993548-1e7ffb00-0592-11eb-8f35-e688fd923d24.png)
-![badge](https://action-badges.now.sh/Grezor/Todolist)
+[![Actions Status: test](https://github.com/Grezor/github-actions-badge/workflows/ci/badge.svg)](https://github.com/Grezor/github-actions-badge/actions?query=workflow%3Aci)
 # Table of content: 
    * [Introduction](#Introduction)
    * [Installation](#Installation)
