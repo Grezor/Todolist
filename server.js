@@ -146,7 +146,9 @@ app.delete('/api/todolists/:id', (req, res) => {
  */
 function validateTodolist (todolist) {
   // retourne un booleen indiquant si l'object possède une propriété 'name et done'
+  // eslint-disable-next-line no-prototype-builtins
   const nameValid = !todolist.hasOwnProperty('name') || todolist.name instanceof String && todolist.name.length >= 3
+  // eslint-disable-next-line no-prototype-builtins
   const doneValid = !todolist.hasOwnProperty('done') || todolist.done instanceof Boolean
   return nameValid && doneValid
 }
