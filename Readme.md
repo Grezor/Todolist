@@ -1,6 +1,6 @@
 # Todo List 
 ![Banner TodoList](https://user-images.githubusercontent.com/38507456/94993548-1e7ffb00-0592-11eb-8f35-e688fd923d24.png)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![badge](https://action-badges.now.sh/Grezor/Todolist)
 # Table of content: 
    * [Introduction](#Introduction)
    * [Installation](#Installation)
