@@ -1,1 +1,0 @@
-l'application consomme une ou plusieurs api, cette partie inclus toutes les informations pertinantes les concernant.

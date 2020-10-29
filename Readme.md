@@ -1,6 +1,6 @@
 # Todo List 
 ![Banner TodoList](https://user-images.githubusercontent.com/38507456/94993548-1e7ffb00-0592-11eb-8f35-e688fd923d24.png)
-[![Actions Status: test](https://github.com/Grezor/github-actions-badge/workflows/ci/badge.svg)](https://github.com/Grezor/github-actions-badge/actions?query=workflow%3Aci)
+
 # Table of content: 
    * [Introduction](#Introduction)
    * [Installation](#Installation)
@@ -28,10 +28,11 @@ For the installation of the project everything is explained in the **chapters fo
 Javascript, CSS, HTML
 ```
 ## Start
+**[fr](https://github.com/Grezor/Todolist/demarrage)
 - On Github, go to the main page of the project
 - Open a terminal, or git bash
 - Replace the current working directory with the location where you want to clone it.
-- Type ```git clone https://github.com/Grezor/Todolist.git ```
+- Type ```git clone https://github.com/Grezor/TodolistTodolist.git ```
 - Press on ```Entry```
 - Once the installation is complete, type **npm -i** in the terminal.     Install the dependencies in the local node_modules folder.
 - Type : **npm start** in the terminal
@@ -75,10 +76,7 @@ API is an acronym for Applications Programming Interface. An API is therefore a 
 In progress
 ```
 ## Contribute
-```
-In progress
-```
-
+Before contributing, do not hesitate to have a look at the documentation/contribute file.
 ## Author
 **Duplessi Geoffrey** 
 

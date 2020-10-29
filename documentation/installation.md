@@ -3,7 +3,7 @@
 Si vous souhaiter installer mon projet sur votre ordinateur, rien de bien compliqué il suffis de cliquer sur le boutton "clone or download" en vert.
 Une fois sur votre ordinateur, rendez vous dans le projet afin de pouvoir comprendre le fonctionnement.
 
-## Installation : 
+## Installation: 
 - ouvrez un editeur de text (visual studio code), ensuite entrer dans le termianl
     - taper la commande : **npm install** (installation les dépendance utilisé dans le projet)
 - une fois terminer il suffis de lancer le projet
