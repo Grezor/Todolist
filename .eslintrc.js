@@ -3,11 +3,13 @@ module.exports = {
         "browser": true,
         "es2020": true
     },
-    "extends": "eslint:recommended",
+    "extends": "standard",
     "parserOptions": {
         "ecmaVersion": 11,
         "sourceType": "module"
     },
     "rules": {
-    }
+        "semi": ["error", "never"],
+        "quotes": [2, "single"]
+      }
 };

@@ -1,13 +1,13 @@
-const InputTache = document.getElementById("new-task");
-const AjouterTache = document.querySelector("button");
+const InputTache = document.getElementById('new-task')
+const AjouterTache = document.querySelector('button')
 // const incompleteTache = document.getElementById("incomplete-tasks");
 // const completeTache = document.getElementById("completed-tasks");
-const serverUrl = 'http://localhost:3000';
+const serverUrl = 'http://localhost:3000'
 // container a faire
 const app = document.getElementById('todo')
 const container = document.createElement('ul')
 container.setAttribute('id', 'incomplete-tasks')
-app.appendChild(container);
+app.appendChild(container)
 // container Terminer
 const appdone = document.getElementById('done')
 const containerDone = document.createElement('ul')
@@ -15,30 +15,30 @@ containerDone.setAttribute('id', 'complete-tasks')
 appdone.appendChild(containerDone)
 
 // evenement
-AjouterTache.addEventListener("click", addTasks);
+AjouterTache.addEventListener('click', addTasks)
 // Si on appuie sur la touche entrée dans l'input pour ajouter une tache
-InputTache.addEventListener("keypress", addlistAfterKey);
+InputTache.addEventListener('keypress', addlistAfterKey)
 
-render();
+render()
 
 /**
  * Function pour ajouter une tache
- * @param {*} taskValue 
+ * @param {*} taskValue
  */
-function APIadd(taskValue) {
-    var request = new XMLHttpRequest();
-    request.open('POST', serverUrl + '/api/todolists/', true);
-    request.setRequestHeader("Content-Type", "application/json");
-    request.onload = function () {
-        // si le status de la requetes = 200, cela affiche le chargement de la todolist
-        if (request.status >= 200 && request.status < 400) {
-            render();
-        }
-    };
-    // envoie les donnees en json
-    request.send(JSON.stringify({
-        name: taskValue
-    }));
+function APIadd (taskValue) {
+  const request = new XMLHttpRequest()
+  request.open('POST', serverUrl + '/api/todolists/', true)
+  request.setRequestHeader('Content-Type', 'application/json')
+  request.onload = function () {
+  // si le status de la requetes = 200, cela affiche le chargement de la todolist
+    if (request.status >= 200 && request.status < 400) {
+      render()
+    }
+  }
+  // envoie les donnees en json
+  request.send(JSON.stringify({
+    name: taskValue
+  }))
 }
 
 /**
