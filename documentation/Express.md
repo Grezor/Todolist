@@ -1,11 +1,16 @@
-# Routes : 
-## methode GET : 
+<!-- # Routes 
+
+```js
+const express = require('express')
+const app = express()
+```
+## methode GET  
 - affiche tout les taches a faire
 ```javascript 
 // affiche toute les taches
-app.get('/', (req, res) => {
-  res.sendfile('public/index.html');
-});
+  app.get('/', (req, res) => {
+    res.sendfile('public/index.html');
+  });
 ```
 
 - affiche **id** de la taches
@@ -21,7 +26,7 @@ app.get('/api/todolists/:id', (req, res) => {
 ## methode POST : 
 - ajout d'une taches a faire
 ```javascript 
-app.post('/api/todolists', (req, res) => {
+  app.post('/api/todolists', (req, res) => {
   const {
     error
   } = validateTodolist(req.body);
@@ -92,4 +97,4 @@ app.delete('/api/todolists/:id', (req, res) => {
   res.send(todolist)
 });
 ```
-
+ -->
