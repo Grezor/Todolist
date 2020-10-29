@@ -21,10 +21,6 @@ InputTache.addEventListener("keypress", addlistAfterKey);
 
 render();
 
-
-
-
-
 /**
  * Function pour ajouter une tache
  * @param {*} taskValue 
