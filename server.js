@@ -158,6 +158,10 @@ function validateTodolist (todolist) {
  */
 const port = 3000
 const hostname = 'localhost'
-app.listen(port, hostname, function () {
+const server = app.listen(port, hostname, function () {
   console.log('Mon serveur fonctionne sur http://' + hostname + ':' + port + '\n')
 })
+
+module.exports = server
+
+

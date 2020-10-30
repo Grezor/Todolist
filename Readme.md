@@ -28,7 +28,7 @@ For the installation of the project everything is explained in the **chapters fo
 Javascript, CSS, HTML
 ```
 ## Start
-**[fr](https://github.com/Grezor/Todolist/demarrage)
+**[fr](https://github.com/Grezor/Todolist/demarrage/installation.md)
 - On Github, go to the main page of the project
 - Open a terminal, or git bash
 - Replace the current working directory with the location where you want to clone it.
