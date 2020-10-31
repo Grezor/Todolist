@@ -7,8 +7,8 @@
     "node": "12.11.1"
   },
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "jest --watchAll"
+    "start": "nodemon --exec babel-node server.js",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Grezor/TodoLists#readme",
   "dependencies": {
+    "@babel/register": "^7.12.1",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "coverage": "^0.4.1",
@@ -34,6 +35,8 @@
     "supervisor": "^0.12.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
     "babel-plugin-istanbul": "^6.0.0",
     "eslint": "^7.12.1",
     "eslint-config-airbnb": "^18.2.0",
