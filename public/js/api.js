@@ -204,7 +204,11 @@ function render () {
 }
 
 function addTasks () {
-  const taskValue = document.getElementById('new-task').value
+  const taskValue = document.getElementById('new-task').value;
+  if( !taskValue.replace(/\s+/, '').length ) {
+    alert( "Le champ de la tache est vide!" );
+    return false;
+  }
   APIadd(taskValue)
 }
 
@@ -226,7 +230,7 @@ function listenerClicEdit (event) {
  * Tache en cours
  */
 // var taskIncomplete = function () {
-//
+
 //     var listeItem = this.parentNode;
 //     incompleteTache.appendChild(listeItem);
 //     bindTaskEvents(listeItem, TerminerTache);
