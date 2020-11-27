@@ -4,16 +4,15 @@
 }
 
 body {
-  background: #354057 !important;
   color: #fff;
   padding: 30px;
+  background: #F3706B;
 }
 
 .container {
   display: block;
   width: 700px;
   margin: 10px auto 0;
-  background-color: #354057;
   border-radius: 5px;
 }
 
@@ -223,4 +222,156 @@ ul li.ClassFinish label {
   font-size: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
+}
+
+
+
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.3);
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #eeeeee;
+}
+.app-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 80px;
+  opacity: 1;
+  color: #fff;
+}
+
+svg {
+  width: 64px;
+  height: 64px;
+  color: #fff;
+}
+
+.todo-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.todo-item {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-item span {
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.done span {
+  text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.tick {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tick::before {
+  background: #fff;
+  width: 30px;
+  border-radius: 50%;
+  height: 30px;
+  padding-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px; 
+  padding-bottom: 3px;  
+  justify-content: center;
+  align-items: center;
+  content: url("https://media.discordapp.net/attachments/736658321343512587/747443238939656302/unknown.png");
+  font-size: 20px;
+  border: none;
+  color: #000;
+  display: none;
+}
+
+.done .tick::before {
+  display: inline;
+}
+
+.delete-todo {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.delete-todo svg {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
+  border-radius: 4px;
+  border: none;
+  font-family: 'Poppins';
+  outline: none;
+}
+/* Add this below all the other styles */
+
+.empty-state {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.checklist-icon {
+  margin-bottom: 20px;
+}
+
+.empty-state__title,
+.empty-state__description {
+  margin-bottom: 20px;
+  font-family: 'Poppins';
+  color: #fff;
+}
+
+/* Add this below the other styles */
+.todo-list:empty {
+  display: none;
+}
+
+.todo-list:empty + .empty-state {
+  display: flex;
 }
