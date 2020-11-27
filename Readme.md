@@ -13,6 +13,7 @@
    * [Project status](#Project-status)
    * [Deployment](#Deployment)
    * [Contribute](#Contribute)
+   * [Problems](#Problems)
    * [Author](#Author)
 
 ## Introduction
@@ -28,13 +29,13 @@ For the installation of the project everything is explained in the **chapters fo
 Javascript, CSS, HTML
 ```
 ## Start
-**[fr](https://github.com/Grezor/Todolist/demarrage/installation.md)
+
 - On Github, go to the main page of the project
 - Open a terminal, or git bash
 - Replace the current working directory with the location where you want to clone it.
 - Type ```git clone https://github.com/Grezor/TodolistTodolist.git ```
 - Press on ```Entry```
-- Once the installation is complete, type **npm -i** in the terminal.     Install the dependencies in the local node_modules folder.
+- Once the installation is complete, type **npm -i** in the terminal. Install the dependencies in the local node_modules folder.
 - Type : **npm start** in the terminal
 - result terminal : 
 ```
@@ -71,12 +72,22 @@ API is an acronym for Applications Programming Interface. An API is therefore a 
 
 ## Project status
 ✔️ - the application works correctly
+
 ## Deployment 
 ```
 In progress
 ```
 ## Contribute
 Before contributing, do not hesitate to have a look at the documentation/contribute file.
+
+## Problems:
+if you encounter any difficulties, when starting up, please tell me on 
+[this page](https://github.com/Grezor/Todolist/issues)
+, adding a title and a description, and a picture.
+
+to insert an image, drag and drop and once you have your message click on the preview tab.
+Once finished, click on the submit new issue button.
+
 ## Author
 **Duplessi Geoffrey** 
 
