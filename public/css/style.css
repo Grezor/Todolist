@@ -26,7 +26,6 @@ h3 {
   list-style: none;
 }
 
-
 input[type="text"] {
   margin: 0;
   font-size: 18px;
@@ -80,7 +79,6 @@ li>input[type="checkbox"] {
 li>label {
   font-size: 18px;
   line-height: 40px;
-  width: 100px;
   padding: 0 0 0 11px;
 }
 
@@ -116,8 +114,8 @@ li>label {
 
 /* Nom de la tache */
 .labelColor {
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
+  color: #212121;
+  font-weight: bold;
 }
 
 
@@ -139,7 +137,8 @@ ul li.editMode label {
 */
 ul li.ClassFinish label {
   text-decoration: line-through;
-  color: #95a5a6;
+  color: #000000;
+  font-weight: bold;
   font-size: 20px;
   text-align: center;
 }
@@ -168,11 +167,9 @@ ul li.ClassFinish label {
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
-
 }
 
 .buttonDeleteleft {
-
   background-color: #B24449;
   border: none;
   color: white;
@@ -193,6 +190,7 @@ ul li.ClassFinish label {
   float: right;
   font-size: 12px;
   border-radius: 15%;
+  margin-left: 30px;
 }
 
 .buttonEdit:hover {
@@ -205,7 +203,6 @@ ul li.ClassFinish label {
   display: inline-block;
   font-size: 12px;
 }
-
 
 /* h3 {
   color: #00c4cc;
@@ -223,8 +220,6 @@ ul li.ClassFinish label {
   margin-left: 20px;
   margin-bottom: 20px;
 }
-
-
 
 .container::-webkit-scrollbar {
   width: 10px;
@@ -282,9 +277,9 @@ svg {
   text-decoration: line-through;
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   display: none;
-}
+} */
 
 .tick {
   width: 30px;
