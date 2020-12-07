@@ -229,24 +229,24 @@ function listenerClicEdit (event) {
 /**
  * Tache en cours
  */
-// var taskIncomplete = function () {
+var taskIncomplete = function () {
 
-//     var listeItem = this.parentNode;
-//     incompleteTache.appendChild(listeItem);
-//     bindTaskEvents(listeItem, TerminerTache);
-// }
+    var listeItem = this.parentNode;
+    incompleteTache.appendChild(listeItem);
+    bindTaskEvents(listeItem, TerminerTache);
+}
 
-// var bindTaskEvents = function (tasklisteItem, checkBoxEventHandler) {
-//     console.log("bind list item events");
+var bindTaskEvents = function (tasklisteItem, checkBoxEventHandler) {
+    console.log("bind list item events");
 
-//     var checkBox = tasklisteItem.querySelector("input[type=checkbox]");
-//     var ButtonEdit = tasklisteItem.querySelector("button.edit");
-//     var ButtonSupprimer = tasklisteItem.querySelector("button.delete");
+    var checkBox = tasklisteItem.querySelector("input[type=checkbox]");
+    var ButtonEdit = tasklisteItem.querySelector("button.edit");
+    var ButtonSupprimer = tasklisteItem.querySelector("button.delete");
 
-//     ButtonEdit.onclick = editerTache;
-//     ButtonSupprimer.onclick = supprimerTache;
-//     checkBox.onchange = checkBoxEventHandler;
-// }
+    ButtonEdit.onclick = editerTache;
+    ButtonSupprimer.onclick = supprimerTache;
+    checkBox.onchange = checkBoxEventHandler;
+}
 
 /** Function de fonctionnalité */
 // Si on appuie sur entrer dans l'input

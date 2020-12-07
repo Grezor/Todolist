@@ -7,58 +7,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo List App</title>
     <link rel="icon" type="images" href="./images/favicon-32x32.png">
-    
+
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-
+    
     <script>
         function theme1() {
             document.body.style.background = '#F3706B';
         }
+
         function theme2() {
             document.body.style.background = '#9F659D';
         }
+
         function theme3() {
             document.body.style.background = '#edbf5c';
         }
+
         function theme4() {
             document.body.style.background = '#7aca5e';
         }
+
         function theme5() {
             document.body.style.background = '#4694ae';
         }
     </script>
 
 
-          <div style="display: flex; align-items: center; justify-content: center;padding-bottom: 2rem;" class="theme">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-          onclick="theme1()">
-          <circle cx="7" cy="7" r="6" fill="#F3706B" stroke="white" stroke-width="1"/>
-          </svg>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-          onclick="theme2( )">
-          <circle cx="7" cy="7" r="6" fill="#9F659D" stroke="white" stroke-width="1"/>
-          </svg>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-          onclick="theme3()">
-          <circle cx="7" cy="7" r="6" fill="#edbf5c" stroke="white" stroke-width="1"/>
-          </svg>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-          onclick="theme4()">
-          <circle cx="7" cy="7" r="6" fill="#7aca5e" stroke="white" stroke-width="1"/>
-          </svg>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-          onclick="theme5()">
-          <circle cx="7" cy="7" r="6" fill="#4694ae" stroke="white" stroke-width="1"/>
-          </svg>
-          <br>
-          </div>
+    <div style="display: flex; align-items: center; justify-content: center;padding-bottom: 2rem;" class="theme">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            onclick="theme1()">
+            <circle cx="7" cy="7" r="6" fill="#F3706B" stroke="white" stroke-width="1" />
+        </svg>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            onclick="theme2( )">
+            <circle cx="7" cy="7" r="6" fill="#9F659D" stroke="white" stroke-width="1" />
+        </svg>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            onclick="theme3()">
+            <circle cx="7" cy="7" r="6" fill="#edbf5c" stroke="white" stroke-width="1" />
+        </svg>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            onclick="theme4()">
+            <circle cx="7" cy="7" r="6" fill="#7aca5e" stroke="white" stroke-width="1" />
+        </svg>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            onclick="theme5()">
+            <circle cx="7" cy="7" r="6" fill="#4694ae" stroke="white" stroke-width="1" />
+        </svg>
+        <br>
+    </div>
 
-         
+
 
     <div class="container mx-auto bg-gray-400">
         <div class="wrapper">
@@ -78,8 +83,7 @@
             <div id="done"></div>
 
         </div>
-    </div>
-
+    </div> 
     <script type="text/javascript" src="./js/api.js"></script>
 </body>
 

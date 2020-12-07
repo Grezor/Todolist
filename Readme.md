@@ -1,6 +1,8 @@
 # Todo List 
 ![Banner TodoList](https://user-images.githubusercontent.com/38507456/94993548-1e7ffb00-0592-11eb-8f35-e688fd923d24.png)
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+
 # Table of content: 
    * [Introduction](#Introduction)
    * [Installation](#Installation)
@@ -11,9 +13,9 @@
    * [Functionality](#Functionality)
    * [Utilisation](#Utilisation)
    * [Project status](#Project-status)
-   * [Deployment](#Deployment)
    * [Contribute](#Contribute)
    * [Problems](#Problems)
+   * [Licence](#Licence)
    * [Author](#Author)
 
 ## Introduction
@@ -73,10 +75,6 @@ API is an acronym for Applications Programming Interface. An API is therefore a 
 ## Project status
 ✔️ - the application works correctly
 
-## Deployment 
-```
-In progress
-```
 ## Contribute
 Before contributing, do not hesitate to have a look at the documentation/contribute file.
 
@@ -87,6 +85,9 @@ if you encounter any difficulties, when starting up, please tell me on
 
 to insert an image, drag and drop and once you have your message click on the preview tab.
 Once finished, click on the submit new issue button.
+
+## Licence
+[GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
 
 ## Author
 **Duplessi Geoffrey** 
