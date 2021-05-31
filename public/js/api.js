@@ -230,8 +230,8 @@ function listenerClicEdit (event) {
  * Tache en cours
  */
 var taskIncomplete = function () {
-
     var listeItem = this.parentNode;
+    console.log(listeItem)
     incompleteTache.appendChild(listeItem);
     bindTaskEvents(listeItem, TerminerTache);
 }
