@@ -1,8 +1,9 @@
+var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
 const InputTache = document.getElementById('new-task')
 const AjouterTache = document.querySelector('button')
 // const incompleteTache = document.getElementById("incomplete-tasks");
 // const completeTache = document.getElementById("completed-tasks");
-const serverUrl = 'http://localhost:3000';
+const serverUrl = 'http://localhost:3000'
 // container a faire
 const app = document.getElementById('todo')
 const container = document.createElement('ul')
@@ -52,7 +53,6 @@ function APIedit (event) {
 
     request.open('PUT', serverUrl + '/api/todolists/' + id, true)
     request.setRequestHeader('Content-Type', 'application/json')
-    console.log('edit')
     request.onload = function () {
       if (request.status >= 200 && request.status < 400) {
         render()
@@ -204,10 +204,9 @@ function render () {
 }
 
 function addTasks () {
-  const taskValue = document.getElementById('new-task').value;
+  const taskValue = document.getElementById('new-task').value
   if( !taskValue.replace(/\s+/, '').length ) {
-    alert( "Le champ de la tache est vide!" );
-    return false;
+    return false
   }
   APIadd(taskValue)
 }
@@ -229,26 +228,26 @@ function listenerClicEdit (event) {
 /**
  * Tache en cours
  */
-var taskIncomplete = function () {
-    var listeItem = this.parentNode;
-    console.log(listeItem)
-    incompleteTache.appendChild(listeItem);
-    bindTaskEvents(listeItem, TerminerTache);
-}
+// var taskIncomplete = function () {
 
-var bindTaskEvents = function (tasklisteItem, checkBoxEventHandler) {
-    console.log("bind list item events");
+//   var listeItem = this.parentNode
+//   incompleteTache.appendChild(listeItem)
+//   bindTaskEvents(listeItem, TerminerTache)
+// }
 
-    var checkBox = tasklisteItem.querySelector("input[type=checkbox]");
-    var ButtonEdit = tasklisteItem.querySelector("button.edit");
-    var ButtonSupprimer = tasklisteItem.querySelector("button.delete");
+// var bindTaskEvents = function (tasklisteItem, checkBoxEventHandler) {
+//   console.log('bind list item events')
 
-    ButtonEdit.onclick = editerTache;
-    ButtonSupprimer.onclick = supprimerTache;
-    checkBox.onchange = checkBoxEventHandler;
-}
+//   var checkBox = tasklisteItem.querySelector('input[type=checkbox]')
+//   var ButtonEdit = tasklisteItem.querySelector('button.edit')
+//   var ButtonSupprimer = tasklisteItem.querySelector('button.delete')
 
-/** Function de fonctionnalité */
+//   ButtonEdit.onclick = editerTache
+//   ButtonSupprimer.onclick = supprimerTache
+//   checkBox.onchange = checkBoxEventHandler
+// }
+
+
 // Si on appuie sur entrer dans l'input
 function addlistAfterKey (event) {
   if (inputlength() > 0 && event.which === 13) {
