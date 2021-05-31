@@ -1,9 +1,8 @@
-# Todo List 
+# Todo List
 ![Banner TodoList](https://user-images.githubusercontent.com/38507456/94993548-1e7ffb00-0592-11eb-8f35-e688fd923d24.png)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
-# Table of content: 
    * [Introduction](#Introduction)
    * [Installation](#Installation)
    * [Technologies](#Technologies)
@@ -22,6 +21,8 @@
 Following my work-linked training, my company asked me to create a todoList. With Javascript and NodeJS languages
 The todoList uses APIs with the Express socket. Routes to add or remove tasks. But also to be able to edit 
 a stain, or to finish it off.
+
+create 019/2020
 
 ## Installation
 For the installation of the project everything is explained in the **chapters folder**, then the **installation** directory. 
@@ -51,9 +52,8 @@ listening http://localhost:3000
 - Open your browser: type **http://localhost:3000**
 
 ## Illustration
-```
-In progress
-```
+![todo](https://user-images.githubusercontent.com/38507456/120164327-bfdf4f80-c1fa-11eb-9f6b-deff1ca2cca3.png)
+
 ## API
 API is an acronym for Applications Programming Interface. An API is therefore a programming interface that allows you to "plug in" to an application to exchange data. It operates on an input/output agreement, it is a distribution channel. A API is open and offered by the program owner. It is a concept and an intangible element.
 
@@ -62,11 +62,10 @@ API is an acronym for Applications Programming Interface. An API is therefore a 
 - task n°2 : http://localhost:3000/api/todolists/2
 
 ## Functionality
-- Create 
-- Read
-- Update
-- Delete
-
+```
+- [Create, Read, Update, Delete]
+- possibility to change the background colour
+```
 ## Use
 - Creates a new task
 - Update a task
