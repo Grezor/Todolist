@@ -25,8 +25,7 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.7",
-    "socket.io": "^4.1.1"
+    "nodemon": "^2.0.7"
   },
   "dependencies": {
     "xmlhttprequest": "^1.8.0"
