@@ -26,8 +26,8 @@ create 2019/2020
 
 ## Installation
 For the installation of the project everything is explained in the **chapters folder**, then the **installation** directory. 
-- [Installation FR](https://www.google.com)
-- [Installation EN](https://www.google.com)
+- [Installation FR](https://github.com/Grezor/Todolist/blob/master/documentation/installation_FR.md)
+- [Installation EN](https://github.com/Grezor/Todolist/blob/master/documentation/installation_EN.md)
 
 ## Technologies
 ```
