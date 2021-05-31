@@ -14,11 +14,6 @@
         "sourceType": "module"
     },
     "rules": {
-        // "no-var": "warn",
-        "camelcase": ["error", {
-            "allow": ["^UNSAFE_"],
-            "properties": "never",
-            "ignoreGlobals": true
-          }]
+        "no-unused-vars": "error"
     }
 }
