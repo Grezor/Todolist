@@ -22,10 +22,12 @@ Following my work-linked training, my company asked me to create a todoList. Wit
 The todoList uses APIs with the Express socket. Routes to add or remove tasks. But also to be able to edit 
 a stain, or to finish it off.
 
-create 019/2020
+create 2019/2020
 
 ## Installation
 For the installation of the project everything is explained in the **chapters folder**, then the **installation** directory. 
+- [Installation FR](https://www.google.com)
+- [Installation EN](https://www.google.com)
 
 ## Technologies
 ```

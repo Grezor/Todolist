@@ -9,7 +9,7 @@ Une fois sur votre ordinateur, rendez vous dans le projet afin de pouvoir compre
 - une fois terminer il suffis de lancer le projet
   - toujours dans le terminal, lancer la commande **npm start**
   - le programme va effectuer une vérification et vous affichera une commande situer en dessous 
-  - il suffira d'aller dans votre navigateur et de taper dans la barre de recheche google : **http://localhost:1472**
+  - il suffira d'aller dans votre navigateur et de taper dans la barre de recheche google : **http://localhost:3000**
   
 > une fois taper npm start, vous aurez ceci dans votre terminal
   ```
