@@ -18,7 +18,7 @@ Once on your computer, go to the project to understand how it works.
     > todolists@1.0.0 start D:\yourDirectory\TodoList
     > nodemon server.js
 
-    nodemon] 2.0.2
+    [nodemon] 2.0.2
     [nodemon] to restart at any time, enter `rs`
     [nodemon] watching dir(s): *.*
     [nodemon] watching extensions: js,mjs,json

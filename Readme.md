@@ -25,21 +25,18 @@ a stain, or to finish it off.
 create 2019/2020
 
 ## Installation
-For the installation of the project everything is explained in the **chapters folder**, then the **installation** directory. 
-- [Installation FR](https://github.com/Grezor/Todolist/blob/master/documentation/installation_FR.md)
-- [Installation EN](https://github.com/Grezor/Todolist/blob/master/documentation/installation_EN.md)
+- On Github, go to the main page of the project
+- Open a terminal, or git bash
+- Replace the current working directory with the location where you want to clone it.
+- Type ```git clone https://github.com/Grezor/Todolist.git```
+press on Entry
 
 ## Technologies
 ```
 Javascript, CSS, HTML
 ```
 ## Start
-
-- On Github, go to the main page of the project
-- Open a terminal, or git bash
-- Replace the current working directory with the location where you want to clone it.
-- Type ```git clone https://github.com/Grezor/TodolistTodolist.git ```
-- Press on ```Entry```
+- enter the project with a terminal
 - Once the installation is complete, type **npm -i** in the terminal. Install the dependencies in the local node_modules folder.
 - Type : **npm start** in the terminal
 - result terminal : 
