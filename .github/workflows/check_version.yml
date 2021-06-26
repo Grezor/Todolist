@@ -1,22 +1,24 @@
 name: GitHub Actions Update Package.json
-on: [push]
+on: 
+  push:
+    branches:
+      - "master"
+  schedule:
+    - cron: 0 0 * * 3
 
 jobs:
-  createPullRequest:
+  package-update:
     runs-on: ubuntu-latest
     steps:
-  
-      - uses: fregante/setup-git-user@v1
-      - run: git config user.email
-      - run: git config user.name
-      - uses: actions/checkout@v1
-      - name: Bump version
-        run: npm version patch
-      - name: Create Pull Request
-      
-        uses: peter-evans/create-pull-request@v1
-        with:
-          token: ${{ secrets.UPDATE }}
-          commit-message: Bump version
-          title: Bump version
+    - uses: actions/checkout@master
+    - name: package-update
+      uses: taichi/actions-package-update@master
+      env:
+        AUTHOR_EMAIL: duplessi.geoffrey@gmail.com
+        AUTHOR_NAME: Grezor
+        EXECUTE: "true"
+        GITHUB_TOKEN: ${{ secrets.UPDATE }}
+        LOG_LEVEL: debug
+      with:
+        args: -u --packageFile package.json --loglevel verbose
     
