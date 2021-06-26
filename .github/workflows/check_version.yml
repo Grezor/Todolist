@@ -1,16 +1,21 @@
-
-on: push
-name: Update Version
+on:
+  schedule:
+  - cron: 0 0 * * 3
+name: Update
 jobs:
-  createPullRequest:
+  package-update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Bump version
-        run: npm version patch
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v1
-        with:
-          token: ${{ secrets.UPDATE }}
-          commit-message: Bump version
-          title: Bump version
+    - uses: actions/checkout@master
+    - name: set remote url
+      run: git remote set-url --push origin https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+    - name: package-update
+      uses: taichi/actions-package-update@master
+      env:
+        AUTHOR_EMAIL: john@example.com
+        AUTHOR_NAME: john
+        EXECUTE: "true"
+        GITHUB_TOKEN: ${{ secrets.UPDATE }}
+        LOG_LEVEL: debug
+      with:
+        args: -u --packageFile package.json --loglevel verbose
