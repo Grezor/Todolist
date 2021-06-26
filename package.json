@@ -30,5 +30,6 @@
   "dependencies": {
     "actions-package-update": "^0.11.0",
     "xmlhttprequest": "^1.8.0"
-  }
+  },
+  "keywords": []
 }
