@@ -1,11 +1,15 @@
 name: GitHub Actions Update Package.json
 on: [push]
+
 jobs:
   createPullRequest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+  
       - uses: fregante/setup-git-user@v1
+      - run: git config user.email
+      - run: git config user.name
+      - uses: actions/checkout@v1
       - name: Bump version
         run: npm version patch
       - name: Create Pull Request
