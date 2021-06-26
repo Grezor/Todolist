@@ -1,5 +1,8 @@
 name: depup
-on:
+on : 
+  push:
+    branches:
+      - master
   schedule:
     - cron:  '14 14 * * *'
 
