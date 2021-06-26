@@ -22,7 +22,7 @@ Following my work-linked training, my company asked me to create a todoList. Wit
 The todoList uses APIs with the Express socket. Routes to add or remove tasks. But also to be able to edit 
 a stain, or to finish it off.
 
-create 2019/2020
+- create 2019/2020
 
 ## Installation
 - On Github, go to the main page of the project
