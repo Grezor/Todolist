@@ -77,12 +77,21 @@ API is an acronym for Applications Programming Interface. An API is therefore a 
 Before contributing, do not hesitate to have a look at the documentation/contribute file.
 
 ## Problems:
+
+
+<details><summary><b>Détails</b></summary>
+<p>
+
+#### Create issue :
 if you encounter any difficulties, when starting up, please tell me on 
 [this page](https://github.com/Grezor/Todolist/issues)
 , adding a title and a description, and a picture.
 
 to insert an image, drag and drop and once you have your message click on the preview tab.
 Once finished, click on the submit new issue button.
+
+</p>
+</details>
 
 ## Licence
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
