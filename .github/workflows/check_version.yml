@@ -1,10 +1,10 @@
-name: GitHub Actions Update Package.json
+name: Update Package.json
 on: 
   push:
     branches:
       - "master"
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 3'
 
 jobs:
   package-update:
@@ -18,7 +18,7 @@ jobs:
       env:
         AUTHOR_EMAIL: duplessi.geoffrey@gmail.com
         AUTHOR_NAME: Grezor
-        EXECUTE: "true"
+        EXECUTE: true
         GITHUB_TOKEN: ${{ secrets.UPDATE }}
         LOG_LEVEL: debug
       with:
