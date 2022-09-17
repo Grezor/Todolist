@@ -4,11 +4,10 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 - [Todo List](#todo-list)
   - [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Technologies](#technologies)
-  - [Start](#start)
   - [Illustration](#illustration)
-  - [Use](#use)
+  - [Roadmap](#roadmap)
   - [Project status](#project-status)
   - [Contribute](#contribute)
   - [Update dependances](#update-dependances)
@@ -20,42 +19,37 @@ Following my work-linked training, my company asked me to create a todoList. Wit
 The todoList uses APIs with the Express socket. Routes to add or remove tasks. But also to be able to edit 
 a stain, or to finish it off.
 
-- create 2019/2020
+## Prerequisites
+* HTML
+* CSS
+* Javascript
 
 ## Installation
-- On Github, go to the main page of the project
-- Open a terminal, or git bash
-- Replace the current working directory with the location where you want to clone it.
-- Type ```git clone https://github.com/Grezor/Todolist.git```
-press on Entry
-- enter the project with a terminal
-- Once the installation is complete, type **npm -i** in the terminal. Install the dependencies in the local node_modules folder.
-- Type : **npm start** in the terminal
-- result terminal : 
-```
-[nodemon] version
-[nodemon] to restart at any time, enter `rs`
-[nodemon] watching path(s): *.*
-[nodemon] watching extensions: js,mjs,json
-[nodemon] starting `node server.js`
-listening http://localhost:3000
-```
-- Open your browser: type **http://localhost:3000**
-
-## Technologies
-```
-Javascript, CSS, HTML
-```
-## Start
-
+1. clone the repo
+   ```sh
+   git clone https://github.com/Grezor/Todolist.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Server start
+   ```sh
+   npm start
+   ```
+4. Open the browser
+   ```sh
+   http://localhost:3000
+   ```
 
 ## Illustration
 ![todo](https://user-images.githubusercontent.com/38507456/120164327-bfdf4f80-c1fa-11eb-9f6b-deff1ca2cca3.png)
 
-## Use
-- Creates a new task
-- Update a task
-- Delete a task
+## Roadmap
+- [x] Create Task
+- [x] Update Task
+- [x] Delete Task
+- [x] Change the background color
 
 ## Project status
 - works well
@@ -73,4 +67,3 @@ Before contributing, do not hesitate to have a look at the documentation/contrib
 
 ## Author
 **Duplessi Geoffrey** 
-
