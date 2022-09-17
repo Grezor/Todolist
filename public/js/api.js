@@ -176,7 +176,6 @@ function APIClickDeleteTasks (event) {
 
   request.open('DELETE', serverUrl + '/api/todolists/' + id, true)
   request.setRequestHeader('Content-Type', 'application/json')
-  console.log('%c delete ', 'background: #222; color: #e74c3c; font-size:30px;')
   request.onload = function () {
     // si l'erreur est supérieur a 200 et inférieur a 400
     if (request.status >= 200 && request.status < 400) {
@@ -236,8 +235,6 @@ var taskIncomplete = function () {
 }
 
 var bindTaskEvents = function (tasklisteItem, checkBoxEventHandler) {
-  console.log('bind list item events')
-
   var checkBox = tasklisteItem.querySelector('input[type=checkbox]')
   var ButtonEdit = tasklisteItem.querySelector('button.edit')
   var ButtonSupprimer = tasklisteItem.querySelector('button.delete')
@@ -246,7 +243,6 @@ var bindTaskEvents = function (tasklisteItem, checkBoxEventHandler) {
   ButtonSupprimer.onclick = supprimerTache
   checkBox.onchange = checkBoxEventHandler
 }
-
 
 // Si on appuie sur entrer dans l'input
 function addlistAfterKey (event) {

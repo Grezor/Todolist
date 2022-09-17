@@ -86,8 +86,6 @@ app.post('/api/todolists', (req, res) => {
   }
 
   todolists.push(todolist)
-  console.log(todolists.length, 'valeur dans le tableau todoLists')
-  console.log('=== ', todolists)
   res.send(todolist)
 })
 
@@ -111,10 +109,10 @@ app.put('/api/todolists/:id', (req, res) => {
     res.status(400).send(error.details[0].message)
     return
   }
-  // si il existe pas ou tu enleve todolist name
+  
   todolist.name = req.body.name || todolist.name
   todolist.done = req.body.done
-  console.log('la tache n° : ' + req.params.id + ' à été mis à jour')
+  
   res.send(todolist)
 })
 
@@ -134,7 +132,6 @@ app.delete('/api/todolists/:id', (req, res) => {
   // splite permet de diviser une chaine à partir d'un séparateurs
   todolists.splice(index, 1)
   // return la list du tableau
-  console.log('id :  ' + req.params.id + ' ========== element supprimer ')
   res.send(todolist)
 })
 
