@@ -14,6 +14,7 @@
    * [Project status](#Project-status)
    * [Contribute](#Contribute)
    * [Problems](#Problems)
+   * [Update dependances](#Update-dependances)
    * [Licence](#Licence)
    * [Author](#Author)
 
@@ -92,6 +93,10 @@ Once finished, click on the submit new issue button.
 
 </p>
 </details>
+## Update dependances
+- npm install -g npm-check-updates
+- ncu
+- npm install
 
 ## Licence
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
