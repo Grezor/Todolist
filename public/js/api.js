@@ -227,17 +227,17 @@ function listenerClicEdit (event) {
 /**
  * Tache en cours
  */
-var taskIncomplete = function () {
+const taskIncomplete = function () {
 
-  var listeItem = this.parentNode
+  const listeItem = this.parentNode
   incompleteTache.appendChild(listeItem)
   bindTaskEvents(listeItem, TerminerTache)
 }
 
-var bindTaskEvents = function (tasklisteItem, checkBoxEventHandler) {
-  var checkBox = tasklisteItem.querySelector('input[type=checkbox]')
-  var ButtonEdit = tasklisteItem.querySelector('button.edit')
-  var ButtonSupprimer = tasklisteItem.querySelector('button.delete')
+const bindTaskEvents = function (tasklisteItem, checkBoxEventHandler) {
+  const checkBox = tasklisteItem.querySelector('input[type=checkbox]')
+  const ButtonEdit = tasklisteItem.querySelector('button.edit')
+  const ButtonSupprimer = tasklisteItem.querySelector('button.delete')
 
   ButtonEdit.onclick = editerTache
   ButtonSupprimer.onclick = supprimerTache
