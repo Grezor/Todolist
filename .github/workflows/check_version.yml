@@ -4,12 +4,8 @@ on:
     branches:
       - "master"
   schedule:
-<<<<<<< HEAD
-    - cron: '0 0 * * 3'
-=======
     - cron: '0 23 * * 1'
->>>>>>> 850304c63944cebbc28700b7cb021ee4cf5057cb
-
+    
 jobs:
   package-update:
     runs-on: ubuntu-latest
