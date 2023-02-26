@@ -2,7 +2,6 @@
 
 - [Todo List](#todo-list)
   - [Introduction](#introduction)
-
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Illustration](#illustration)
