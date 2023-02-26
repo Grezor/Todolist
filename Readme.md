@@ -1,4 +1,4 @@
-![todoList](https://user-images.githubusercontent.com/38507456/221425575-d78536ce-cb65-4dc7-9895-985398a9eb3a.png)
+![todoList](https://user-images.githubusercontent.com/38507456/221426914-7a37a042-7801-4250-a8c0-3aef97f40861.png)
 
 - [Todo List](#todo-list)
   - [Introduction](#introduction)
@@ -17,8 +17,8 @@ a stain, or to finish it off.
 * NodeJS
 
 ## Installation
-1. git clone https://github.com/Grezor/Todolist.git
-2. npm install![Uploading Sans titre.png…]()
+1. git clone ```https://github.com/Grezor/Todolist.git```
+2. npm install
 3. Server start
 4. Open the browser http://localhost:3000
 
@@ -30,3 +30,5 @@ a stain, or to finish it off.
 
 ## Author
 **Duplessi Geoffrey** 
+
+*Updated on 2023-02-17*
